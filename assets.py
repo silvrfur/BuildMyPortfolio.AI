@@ -1,14 +1,7 @@
-# portfolio_config.py
-
-# =========================
-# ASSET UNIVERSE
-# =========================
 
 assets = [
 
-    # =========================
     # LARGE CAP EQUITY
-    # =========================
     'RELIANCE.NS',
     'TCS.NS',
     'HDFCBANK.NS',
@@ -18,51 +11,37 @@ assets = [
     'LT.NS',
     'SBIN.NS',
 
-    # =========================
     # MID CAP
-    # =========================
     'BAJFINANCE.NS',
     'DMART.NS',
     'PIDILITIND.NS',
     'ADANIPORTS.NS',
 
-    # =========================
     # SMALL CAP
-    # =========================
     'DEEPAKNTR.NS',
     'NAVINFLUOR.NS',
     'BALKRISIND.NS',
 
-    # =========================
     # INDEX ETFs
-    # =========================
     'NIFTYBEES.NS',
     'BANKBEES.NS',
     'MIDCAPETF.NS',
 
-    # =========================
     # SECTOR ETFs
-    # =========================
     'ITBEES.NS',
     'PHARMABEES.NS',
     'AUTOIETF.NS',
 
-    # =========================
     # INTERNATIONAL ETFs
-    # =========================
     'MON100.NS',      # Nasdaq 100
     'MAFANG.NS',      # FAANG ETF
     'SP500ETF.NS',    # S&P 500 exposure
 
-    # =========================
     # GOLD & SILVER
-    # =========================
     'GOLDSHARE.NS',
     'SILVERBEES.NS',
 
-    # =========================
     # DEBT ETFs
-    # =========================
     'LIQUIDBEES.NS',
     'GILT5YBEES.NS',
     'CPSEETF.NS',
@@ -70,9 +49,7 @@ assets = [
 
 ]
 
-# =========================
 # ASSET CLASS MAPPING
-# =========================
 
 asset_classes = {
 
@@ -125,30 +102,20 @@ asset_classes = {
 
 constraints_data = [
 
-    # =========================
     # EQUITY LIMIT
-    # =========================
     [False, 'Classes', 'Class', 'Equity', '<=', 0.60, '', '', '', ''],
 
-    # =========================
     # INTERNATIONAL LIMIT
-    # =========================
     [False, 'Classes', 'Class', 'International', '<=', 0.25, '', '', '', ''],
 
-    # =========================
     # GOLD MINIMUM
-    # =========================
     [False, 'Classes', 'Class', 'Gold', '>=', 0.05, '', '', '', ''],
     [False, 'Classes', 'Class', 'Gold', '<=', 0.20, '', '', '', ''],
 
-    # =========================
     # DEBT MINIMUM
-    # =========================
     [False, 'Classes', 'Class', 'Debt', '>=', 0.10, '', '', '', ''],
 
-    # =========================
     # CASH BUFFER
-    # =========================
     [False, 'Classes', 'Class', 'Cash', '>=', 0.05, '', '', '', ''],
     [False, 'Classes', 'Class', 'Cash', '<=', 0.20, '', '', '', ''],
 
