@@ -1,6 +1,6 @@
 # This module contains the core mapping logic that transforms observable NLP signals into latent-state evidence values.
 
-from __future__ import annotations
+# from __future__ import annotations
 
 from collections.abc import Mapping
 
