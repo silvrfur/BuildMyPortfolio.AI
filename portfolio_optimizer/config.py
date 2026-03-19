@@ -1,32 +1,55 @@
 
-#Conservative portfolio
+# config.py — Portfolio optimization configurations
+# Add "profile" key to every CONFIG — used for DB storage and JSON output naming
 
-# CONFIG = {
-#     "model": "Classic",
-#     "risk_measure": "CVaR",
-#     "lambda_val": 6,
-#     "objective": "Utility",
-#     "cov_method": "ledoit",
-#     "mu_method": "hist",
-#     "lower_bound": 0.05,
-#     "upper_bound": 0.25,
-#     "rf_daily": (1 + 0.06)**(1/252) - 1
-# }
+# ── CONSERVATIVE ─────────────────────────────────────────────────────────────
+# config.py — Portfolio optimization configurations
+# Add "profile" key to every CONFIG — used for DB storage and JSON output naming
 
-
-#Aggressive portfolio
-
-CONFIG = {
-    "model": "Classic",
-    "risk_measure": "MV",
-    "lambda_val": 0.8,
-    "objective": "Utility",
-    "cov_method": "oas",
-    "mu_method": "hist",
-    "lower_bound": 0,
-    "upper_bound": 0.60,
-    "rf_daily": (1 + 0.07)**(1/252) - 1
+# ── CONSERVATIVE ─────────────────────────────────────────────────────────────
+CONSERVATIVE_CONFIG = {
+    "profile":      "conservative",
+    "model":        "Classic",
+    "risk_measure": "CVaR",
+    "lambda_val":   6,
+    "objective":    "Utility",
+    "cov_method":   "ledoit",
+    "mu_method":    "hist",
+    "lower_bound":  0.05,
+    "upper_bound":  0.25,
+    "rf_daily":     (1 + 0.06)**(1/252) - 1,
 }
+
+# ── BALANCED ──────────────────────────────────────────────────────────────────
+BALANCED_CONFIG = {
+    "profile":      "balanced",
+    "model":        "Classic",
+    "risk_measure": "MSV",
+    "lambda_val":   3,
+    "objective":    "Sharpe",
+    "cov_method":   "ledoit",
+    "mu_method":    "hist",     # capm requires factor data — use hist for now
+    "lower_bound":  0,
+    "upper_bound":  0.10,
+    "rf_daily":     (1 + 0.065)**(1/252) - 1,
+}
+
+# ── AGGRESSIVE ────────────────────────────────────────────────────────────────
+AGGRESSIVE_CONFIG = {
+    "profile":      "aggressive",
+    "model":        "Classic",
+    "risk_measure": "MV",
+    "lambda_val":   2,
+    "objective":    "Utility",
+    "cov_method":   "oas",
+    "mu_method":    "ewma1",    # FIXED: riskfolio uses "ewma1" not "ewma"
+    "lower_bound":  0,
+    "upper_bound":  0.15,
+    "rf_daily":     (1 + 0.07)**(1/252) - 1,
+}
+
+# Default — change this to whichever profile you want to run
+CONFIG = CONSERVATIVE_CONFIG
 
 
 
