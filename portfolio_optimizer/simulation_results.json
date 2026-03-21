@@ -1,0 +1,849 @@
+[
+  {
+    "email": "user1@gmail.com",
+    "name": "Arjun Sharma",
+    "persona": "Reactive Investor \u2014 chases sentiment, rebalances often",
+    "capital": 100000.0,
+    "events": [
+      {
+        "date": "2022-01-03",
+        "profile": "conservative",
+        "nlp_input": "Market uncertain after COVID rally, stay safe"
+      },
+      {
+        "date": "2022-02-01",
+        "profile": "aggressive",
+        "nlp_input": "Market feels strong, I want to go aggressive"
+      },
+      {
+        "date": "2022-04-01",
+        "profile": "balanced",
+        "nlp_input": "Things seem okay now, balanced approach"
+      },
+      {
+        "date": "2022-05-01",
+        "profile": "conservative",
+        "nlp_input": "War and inflation fears, make it conservative"
+      },
+      {
+        "date": "2022-12-01",
+        "profile": "balanced",
+        "nlp_input": "Stability is returning, go balanced"
+      }
+    ],
+    "end_date": "2025-01-01",
+    "rebalanced": {
+      "final_value_inr": 175800.66,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 75.8007,
+      "cagr_pct": 20.7269,
+      "sharpe_ratio": 1.551,
+      "max_drawdown_pct": -2.0847,
+      "total_realized_pnl": -2190.51,
+      "total_tax_paid": 511.97,
+      "leftover_cash": 1585.03,
+      "total_trades": 83,
+      "sell_count": 37,
+      "buy_count": 46,
+      "rebalance_count": 4,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.0,
+          "profile": "conservative",
+          "event_label": "Event 1: conservative",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-02-01",
+          "value": 99515.93,
+          "profile": "aggressive",
+          "event_label": "Event 2: aggressive",
+          "leftover_cash": 43591.88,
+          "total_realized_pnl": -439.17,
+          "total_tax_paid": 16.67
+        },
+        {
+          "date": "2022-04-01",
+          "value": 100028.66,
+          "profile": "balanced",
+          "event_label": "Event 3: balanced",
+          "leftover_cash": 4754.19,
+          "total_realized_pnl": -387.08,
+          "total_tax_paid": 112.99
+        },
+        {
+          "date": "2022-05-01",
+          "value": 97943.32,
+          "profile": "conservative",
+          "event_label": "Event 4: conservative",
+          "leftover_cash": 1079.22,
+          "total_realized_pnl": -1775.8,
+          "total_tax_paid": 162.76
+        },
+        {
+          "date": "2022-12-01",
+          "value": 100087.47,
+          "profile": "balanced",
+          "event_label": "Event 5: balanced",
+          "leftover_cash": 1585.03,
+          "total_realized_pnl": -2190.51,
+          "total_tax_paid": 511.97
+        },
+        {
+          "date": "2025-01-01",
+          "value": 175800.66
+        }
+      ]
+    },
+    "hold": {
+      "final_value_inr": 128825.25,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 28.8253,
+      "cagr_pct": 8.8242,
+      "sharpe_ratio": 1.5417,
+      "max_drawdown_pct": -1.3071,
+      "total_realized_pnl": 0.0,
+      "total_tax_paid": 0.0,
+      "leftover_cash": 8109.22,
+      "total_trades": 14,
+      "sell_count": 0,
+      "buy_count": 14,
+      "rebalance_count": 0,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.0,
+          "profile": "conservative",
+          "event_label": "Initial buy (hold)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-02-01",
+          "value": 99532.61,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-04-01",
+          "value": 100896.22,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-05-01",
+          "value": 99577.42,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-12-01",
+          "value": 99935.86,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 128825.25
+        }
+      ]
+    },
+    "comparison": {
+      "winner": "rebalanced",
+      "difference_inr": 46975.41,
+      "rebalanced_better": true,
+      "return_diff_pct": 46.9754,
+      "tax_cost_of_rebalancing": 511.97,
+      "extra_trades": 69
+    }
+  },
+  {
+    "email": "user2@gmail.com",
+    "name": "Priya Nair",
+    "persona": "Dip Buyer \u2014 contrarian, buys when others fear",
+    "capital": 100000.0,
+    "events": [
+      {
+        "date": "2022-01-03",
+        "profile": "balanced",
+        "nlp_input": "Steady investor, balanced approach to start"
+      },
+      {
+        "date": "2022-06-01",
+        "profile": "aggressive",
+        "nlp_input": "Market is down a lot, great buying opportunity, go aggressive"
+      },
+      {
+        "date": "2023-01-02",
+        "profile": "balanced",
+        "nlp_input": "Took profits from the rally, back to balanced"
+      },
+      {
+        "date": "2023-06-01",
+        "profile": "aggressive",
+        "nlp_input": "Bull run starting, ride the momentum aggressively"
+      },
+      {
+        "date": "2024-01-02",
+        "profile": "balanced",
+        "nlp_input": "Election year, be cautious, go balanced"
+      }
+    ],
+    "end_date": "2025-01-01",
+    "rebalanced": {
+      "final_value_inr": 143569.87,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 43.5699,
+      "cagr_pct": 12.8335,
+      "sharpe_ratio": 2.4782,
+      "max_drawdown_pct": -5.8257,
+      "total_realized_pnl": 18024.79,
+      "total_tax_paid": 2885.41,
+      "leftover_cash": 9838.51,
+      "total_trades": 73,
+      "sell_count": 29,
+      "buy_count": 44,
+      "rebalance_count": 4,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 99999.99,
+          "profile": "balanced",
+          "event_label": "Event 1: balanced",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-06-01",
+          "value": 94369.74,
+          "profile": "aggressive",
+          "event_label": "Event 2: aggressive",
+          "leftover_cash": 3010.92,
+          "total_realized_pnl": -6973.72,
+          "total_tax_paid": 53.85
+        },
+        {
+          "date": "2023-01-02",
+          "value": 94174.29,
+          "profile": "balanced",
+          "event_label": "Event 3: balanced",
+          "leftover_cash": 611.91,
+          "total_realized_pnl": -9137.76,
+          "total_tax_paid": 280.67
+        },
+        {
+          "date": "2023-06-01",
+          "value": 105091.86,
+          "profile": "aggressive",
+          "event_label": "Event 4: aggressive",
+          "leftover_cash": 2831.16,
+          "total_realized_pnl": 5201.51,
+          "total_tax_paid": 961.91
+        },
+        {
+          "date": "2024-01-02",
+          "value": 116926.68,
+          "profile": "balanced",
+          "event_label": "Event 5: balanced",
+          "leftover_cash": 9838.51,
+          "total_realized_pnl": 18024.79,
+          "total_tax_paid": 2885.41
+        },
+        {
+          "date": "2025-01-01",
+          "value": 143569.87
+        }
+      ]
+    },
+    "hold": {
+      "final_value_inr": 172894.28,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 72.8943,
+      "cagr_pct": 20.0569,
+      "sharpe_ratio": 3.0108,
+      "max_drawdown_pct": -5.5764,
+      "total_realized_pnl": 0.0,
+      "total_tax_paid": 0.0,
+      "leftover_cash": 10342.44,
+      "total_trades": 13,
+      "sell_count": 0,
+      "buy_count": 13,
+      "rebalance_count": 0,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 99999.99,
+          "profile": "balanced",
+          "event_label": "Initial buy (hold)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-06-01",
+          "value": 94423.58,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-01-02",
+          "value": 95772.96,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-06-01",
+          "value": 109987.18,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2024-01-02",
+          "value": 135066.68,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 172894.28
+        }
+      ]
+    },
+    "comparison": {
+      "winner": "hold",
+      "difference_inr": 29324.41,
+      "rebalanced_better": false,
+      "return_diff_pct": -29.3244,
+      "tax_cost_of_rebalancing": 2885.41,
+      "extra_trades": 60
+    }
+  },
+  {
+    "email": "user3@gmail.com",
+    "name": "Rahul Mehta",
+    "persona": "Panic Seller \u2014 high initial risk, sells on bad news",
+    "capital": 100000.0,
+    "events": [
+      {
+        "date": "2022-01-03",
+        "profile": "aggressive",
+        "nlp_input": "Young investor, high risk appetite, go all in"
+      },
+      {
+        "date": "2022-05-01",
+        "profile": "conservative",
+        "nlp_input": "Market crashed badly, I am scared, make it very safe"
+      },
+      {
+        "date": "2023-01-02",
+        "profile": "aggressive",
+        "nlp_input": "Recovered my confidence, going aggressive again"
+      },
+      {
+        "date": "2023-10-01",
+        "profile": "conservative",
+        "nlp_input": "Middle East conflict, too risky, go conservative"
+      },
+      {
+        "date": "2024-04-01",
+        "profile": "aggressive",
+        "nlp_input": "Rally resumed, back to aggressive"
+      }
+    ],
+    "end_date": "2025-01-01",
+    "rebalanced": {
+      "final_value_inr": 111044.69,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 11.0447,
+      "cagr_pct": 3.5596,
+      "sharpe_ratio": 0.9564,
+      "max_drawdown_pct": -11.6281,
+      "total_realized_pnl": -1131.28,
+      "total_tax_paid": 1171.07,
+      "leftover_cash": 1067.71,
+      "total_trades": 71,
+      "sell_count": 33,
+      "buy_count": 38,
+      "rebalance_count": 4,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.01,
+          "profile": "aggressive",
+          "event_label": "Event 1: aggressive",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-05-01",
+          "value": 88371.86,
+          "profile": "conservative",
+          "event_label": "Event 2: conservative",
+          "leftover_cash": 7915.24,
+          "total_realized_pnl": -11894.27,
+          "total_tax_paid": 182.39
+        },
+        {
+          "date": "2023-01-02",
+          "value": 88937.23,
+          "profile": "aggressive",
+          "event_label": "Event 3: aggressive",
+          "leftover_cash": 52371.57,
+          "total_realized_pnl": -10062.34,
+          "total_tax_paid": 526.33
+        },
+        {
+          "date": "2023-10-01",
+          "value": 92729.07,
+          "profile": "conservative",
+          "event_label": "Event 4: conservative",
+          "leftover_cash": 5295.12,
+          "total_realized_pnl": -9291.38,
+          "total_tax_paid": 526.33
+        },
+        {
+          "date": "2024-04-01",
+          "value": 99586.51,
+          "profile": "aggressive",
+          "event_label": "Event 5: aggressive",
+          "leftover_cash": 1067.71,
+          "total_realized_pnl": -1131.28,
+          "total_tax_paid": 1171.07
+        },
+        {
+          "date": "2025-01-01",
+          "value": 111044.69
+        }
+      ]
+    },
+    "hold": {
+      "final_value_inr": 80868.47,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": -19.1315,
+      "cagr_pct": -6.8441,
+      "sharpe_ratio": -0.7056,
+      "max_drawdown_pct": -31.2859,
+      "total_realized_pnl": 0.0,
+      "total_tax_paid": 0.0,
+      "leftover_cash": 3827.98,
+      "total_trades": 7,
+      "sell_count": 0,
+      "buy_count": 7,
+      "rebalance_count": 0,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.01,
+          "profile": "aggressive",
+          "event_label": "Initial buy (hold)",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-05-01",
+          "value": 88554.26,
+          "profile": "aggressive",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-01-02",
+          "value": 68714.09,
+          "profile": "aggressive",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-10-01",
+          "value": 82194.77,
+          "profile": "aggressive",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2024-04-01",
+          "value": 81658.67,
+          "profile": "aggressive",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 3827.98,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 80868.47
+        }
+      ]
+    },
+    "comparison": {
+      "winner": "rebalanced",
+      "difference_inr": 30176.22,
+      "rebalanced_better": true,
+      "return_diff_pct": 30.1762,
+      "tax_cost_of_rebalancing": 1171.07,
+      "extra_trades": 64
+    }
+  },
+  {
+    "email": "user4@gmail.com",
+    "name": "Sunita Iyer",
+    "persona": "Set and Forget \u2014 conservative throughout, rebalances once a year",
+    "capital": 100000.0,
+    "events": [
+      {
+        "date": "2022-01-03",
+        "profile": "conservative",
+        "nlp_input": "Retiree, capital preservation is priority"
+      },
+      {
+        "date": "2023-01-02",
+        "profile": "conservative",
+        "nlp_input": "Still conservative, annual rebalance only"
+      },
+      {
+        "date": "2024-01-02",
+        "profile": "conservative",
+        "nlp_input": "Staying conservative for another year"
+      }
+    ],
+    "end_date": "2025-01-01",
+    "rebalanced": {
+      "final_value_inr": 122198.31,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 22.1983,
+      "cagr_pct": 6.9223,
+      "sharpe_ratio": 3.9003,
+      "max_drawdown_pct": -0.1516,
+      "total_realized_pnl": 2815.94,
+      "total_tax_paid": 149.27,
+      "leftover_cash": 8358.34,
+      "total_trades": 41,
+      "sell_count": 11,
+      "buy_count": 30,
+      "rebalance_count": 2,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.0,
+          "profile": "conservative",
+          "event_label": "Event 1: conservative",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-01-02",
+          "value": 99848.43,
+          "profile": "conservative",
+          "event_label": "Event 2: conservative",
+          "leftover_cash": 6402.62,
+          "total_realized_pnl": -3007.71,
+          "total_tax_paid": 149.27
+        },
+        {
+          "date": "2024-01-02",
+          "value": 111013.42,
+          "profile": "conservative",
+          "event_label": "Event 3: conservative",
+          "leftover_cash": 8358.34,
+          "total_realized_pnl": 2815.94,
+          "total_tax_paid": 149.27
+        },
+        {
+          "date": "2025-01-01",
+          "value": 122198.31
+        }
+      ]
+    },
+    "hold": {
+      "final_value_inr": 128825.25,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 28.8253,
+      "cagr_pct": 8.8242,
+      "sharpe_ratio": 3.9836,
+      "max_drawdown_pct": -0.0023,
+      "total_realized_pnl": 0.0,
+      "total_tax_paid": 0.0,
+      "leftover_cash": 8109.22,
+      "total_trades": 14,
+      "sell_count": 0,
+      "buy_count": 14,
+      "rebalance_count": 0,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 100000.0,
+          "profile": "conservative",
+          "event_label": "Initial buy (hold)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-01-02",
+          "value": 99997.69,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2024-01-02",
+          "value": 112816.49,
+          "profile": "conservative",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 8109.22,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 128825.25
+        }
+      ]
+    },
+    "comparison": {
+      "winner": "hold",
+      "difference_inr": 6626.94,
+      "rebalanced_better": false,
+      "return_diff_pct": -6.627,
+      "tax_cost_of_rebalancing": 149.27,
+      "extra_trades": 27
+    }
+  },
+  {
+    "email": "user5@gmail.com",
+    "name": "Kiran Desai",
+    "persona": "News Follower \u2014 reacts to geopolitical events frequently",
+    "capital": 100000.0,
+    "events": [
+      {
+        "date": "2022-01-03",
+        "profile": "balanced",
+        "nlp_input": "Moderate investor, balanced start"
+      },
+      {
+        "date": "2022-03-01",
+        "profile": "conservative",
+        "nlp_input": "Russia Ukraine war started, go conservative immediately"
+      },
+      {
+        "date": "2022-07-01",
+        "profile": "balanced",
+        "nlp_input": "Ceasefire hopes, back to balanced"
+      },
+      {
+        "date": "2022-12-01",
+        "profile": "aggressive",
+        "nlp_input": "Santa rally, year end optimism, go aggressive"
+      },
+      {
+        "date": "2023-06-01",
+        "profile": "balanced",
+        "nlp_input": "Good returns, normalise to balanced"
+      },
+      {
+        "date": "2023-10-01",
+        "profile": "conservative",
+        "nlp_input": "Israel Gaza conflict, go conservative again"
+      }
+    ],
+    "end_date": "2025-01-01",
+    "rebalanced": {
+      "final_value_inr": 128101.69,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 28.1017,
+      "cagr_pct": 8.6198,
+      "sharpe_ratio": 1.7378,
+      "max_drawdown_pct": -9.2608,
+      "total_realized_pnl": 10581.07,
+      "total_tax_paid": 3137.56,
+      "leftover_cash": 2326.29,
+      "total_trades": 88,
+      "sell_count": 38,
+      "buy_count": 50,
+      "rebalance_count": 5,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 99999.99,
+          "profile": "balanced",
+          "event_label": "Event 1: balanced",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-03-01",
+          "value": 94706.67,
+          "profile": "conservative",
+          "event_label": "Event 2: conservative",
+          "leftover_cash": 762.23,
+          "total_realized_pnl": -5043.09,
+          "total_tax_paid": 33.07
+        },
+        {
+          "date": "2022-07-01",
+          "value": 90739.21,
+          "profile": "balanced",
+          "event_label": "Event 3: balanced",
+          "leftover_cash": 2505.45,
+          "total_realized_pnl": -9062.06,
+          "total_tax_paid": 151.39
+        },
+        {
+          "date": "2022-12-01",
+          "value": 100347.37,
+          "profile": "aggressive",
+          "event_label": "Event 4: aggressive",
+          "leftover_cash": 322.19,
+          "total_realized_pnl": 1723.53,
+          "total_tax_paid": 1793.31
+        },
+        {
+          "date": "2023-06-01",
+          "value": 106720.94,
+          "profile": "balanced",
+          "event_label": "Event 5: balanced",
+          "leftover_cash": 2870.85,
+          "total_realized_pnl": 8192.55,
+          "total_tax_paid": 2793.63
+        },
+        {
+          "date": "2023-10-01",
+          "value": 108367.64,
+          "profile": "conservative",
+          "event_label": "Event 6: conservative",
+          "leftover_cash": 2326.29,
+          "total_realized_pnl": 10581.07,
+          "total_tax_paid": 3137.56
+        },
+        {
+          "date": "2025-01-01",
+          "value": 128101.69
+        }
+      ]
+    },
+    "hold": {
+      "final_value_inr": 172894.28,
+      "initial_capital_inr": 100000.0,
+      "total_return_pct": 72.8943,
+      "cagr_pct": 20.0569,
+      "sharpe_ratio": 2.3359,
+      "max_drawdown_pct": -10.6488,
+      "total_realized_pnl": 0.0,
+      "total_tax_paid": 0.0,
+      "leftover_cash": 10342.44,
+      "total_trades": 13,
+      "sell_count": 0,
+      "buy_count": 13,
+      "rebalance_count": 0,
+      "checkpoints": [
+        {
+          "date": "2022-01-03",
+          "value": 99999.99,
+          "profile": "balanced",
+          "event_label": "Initial buy (hold)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-03-01",
+          "value": 94739.73,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-07-01",
+          "value": 89351.17,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2022-12-01",
+          "value": 98418.4,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-06-01",
+          "value": 109987.18,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2023-10-01",
+          "value": 126963.83,
+          "profile": "balanced",
+          "event_label": "Hold (no rebalance)",
+          "leftover_cash": 10342.44,
+          "total_realized_pnl": 0.0,
+          "total_tax_paid": 0.0
+        },
+        {
+          "date": "2025-01-01",
+          "value": 172894.28
+        }
+      ]
+    },
+    "comparison": {
+      "winner": "hold",
+      "difference_inr": 44792.59,
+      "rebalanced_better": false,
+      "return_diff_pct": -44.7926,
+      "tax_cost_of_rebalancing": 3137.56,
+      "extra_trades": 75
+    }
+  }
+]

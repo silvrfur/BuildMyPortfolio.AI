@@ -6,11 +6,11 @@ import matplotlib.pyplot as plt
 import json
 from datetime import datetime
 from assets import assets, asset_classes, constraints_data
-from config import CONSERVATIVE_CONFIG, AGGRESSIVE_CONFIG
+from config import CONFIG
 
 
 def run_portfolio(
-    config,
+    config=CONFIG,
     asset_list=assets,
     asset_class_map=asset_classes,
     constraints=constraints_data,
@@ -19,20 +19,24 @@ def run_portfolio(
     plot=True,
     save_json=True,
     verbose=True,
+    preloaded_data=None,   # pass a pre-downloaded Close price DataFrame to skip re-downloading
 ):
     """
     Run the full portfolio optimisation pipeline.
 
     Parameters
     ----------
-    config          : dict   — CONFIG dict from config.py
-    asset_list      : list   — list of ticker strings
-    asset_class_map : dict   — {ticker: class} mapping
-    constraints     : list   — constraints_data rows
-    start / end     : str    — data window (YYYY-MM-DD)
-    plot            : bool   — show efficient frontier plot
-    save_json       : bool   — write result to .json file
-    verbose         : bool   — print console summary
+    config          : dict      — CONFIG dict from config.py
+    asset_list      : list      — list of ticker strings
+    asset_class_map : dict      — {ticker: class} mapping
+    constraints     : list      — constraints_data rows
+    start / end     : str       — data window (YYYY-MM-DD)
+    plot            : bool      — show efficient frontier plot
+    save_json       : bool      — write result to .json file
+    verbose         : bool      — print console summary
+    preloaded_data  : DataFrame — pre-downloaded Close prices (skips yf.download)
+                                  Must be indexed by date with ticker columns.
+                                  Pass this from the simulator to avoid re-downloading.
 
     Returns
     -------
@@ -43,11 +47,19 @@ def run_portfolio(
     rf_daily  = config["rf_daily"]
     annual_rf = rf_daily * 252
 
-    # ── STEP 1: DOWNLOAD ─────────────────────────────────────────────────────
-    data = yf.download(
-        asset_list, start=start, end=end,
-        threads=True, progress=False
-    )['Close']
+    # ── STEP 1: DOWNLOAD (or use pre-loaded data) ─────────────────────────────
+    if preloaded_data is not None:
+        # Slice the cached DataFrame to the requested date window
+        data = preloaded_data.copy()
+        data = data.loc[
+            (data.index >= pd.Timestamp(start)) &
+            (data.index <= pd.Timestamp(end))
+        ]
+    else:
+        data = yf.download(
+            asset_list, start=start, end=end,
+            threads=True, progress=False
+        )['Close']
 
     # ── STEP 2: DEDUPLICATE COLUMNS ──────────────────────────────────────────
     if data.columns.duplicated().any():
@@ -60,6 +72,7 @@ def run_portfolio(
     threshold = int(0.9 * len(data))
     data = data.dropna(axis=1, thresh=threshold)
     data = data.ffill()
+
     # ── STEP 4: RETURNS ──────────────────────────────────────────────────────
     returns = data.pct_change().dropna()
     returns = returns[sorted(returns.columns)]
