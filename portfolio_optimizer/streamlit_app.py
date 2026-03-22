@@ -98,7 +98,9 @@ with st.sidebar:
         if st.button("▶ Run All Simulations", type="primary", use_container_width=True):
             with st.spinner("Running simulations (this takes 5–10 min)..."):
                 from simulator import run_all_simulations
+                from latent_state_simulator import run_all_latent_state_simulations
                 results = run_all_simulations(verbose=False)
+                run_all_latent_state_simulations(verbose=False)
                 st.cache_data.clear()
                 st.rerun()
         st.stop()
@@ -106,7 +108,9 @@ with st.sidebar:
         if st.button("🔄 Re-run Simulations", use_container_width=True):
             with st.spinner("Running simulations..."):
                 from simulator import run_all_simulations
+                from latent_state_simulator import run_all_latent_state_simulations
                 results = run_all_simulations(verbose=False)
+                run_all_latent_state_simulations(verbose=False)
                 st.cache_data.clear()
                 st.rerun()
 

@@ -12,7 +12,10 @@ The simulator runs each scenario on two parallel tracks:
   Track B — Hold:       only buys on first event, holds to end
 """
 
-from config import CONSERVATIVE_CONFIG, BALANCED_CONFIG, AGGRESSIVE_CONFIG
+try:
+    from .config import CONSERVATIVE_CONFIG, BALANCED_CONFIG, AGGRESSIVE_CONFIG
+except ImportError:
+    from config import CONSERVATIVE_CONFIG, BALANCED_CONFIG, AGGRESSIVE_CONFIG
 
 # Shorthand aliases
 C = CONSERVATIVE_CONFIG

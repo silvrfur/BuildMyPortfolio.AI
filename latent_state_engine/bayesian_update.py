@@ -75,6 +75,13 @@ class BayesianLatentEngine:
         """Return posterior variances for all latent states."""
         return {name: state.variance() for name, state in self.states.items()}
 
+    def get_params(self) -> dict[LatentName, dict[str, float]]:
+        """Return posterior Beta parameters for all latent states."""
+        return {
+            name: {"alpha": float(state.alpha), "beta": float(state.beta)}
+            for name, state in self.states.items()
+        }
+
     def apply_decay(self, decay_factor: float = 0.99) -> None:
         """
         Apply temporal decay so older evidence loses influence.

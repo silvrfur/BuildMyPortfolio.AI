@@ -24,8 +24,12 @@ import yfinance as yf
 from datetime import datetime, date
 from typing import Optional
 
-from simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
-from assets import assets, asset_classes, constraints_data
+try:
+    from .simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
+    from .assets import assets, asset_classes, constraints_data
+except ImportError:
+    from simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
+    from assets import assets, asset_classes, constraints_data
 
 # ── We import riskfolio / portfolio machinery lazily inside functions
 # to allow the simulator to be imported without triggering DB init etc.
@@ -115,7 +119,10 @@ def run_optimizer_historical(config: dict, end_date: str,
     end_str   = str(slice_df.index[-1].date())
 
     try:
-        from riskfolio_main import run_portfolio
+        try:
+            from .riskfolio_main import run_portfolio
+        except ImportError:
+            from riskfolio_main import run_portfolio
         result = run_portfolio(
             config         = config,
             start          = start_str,
