@@ -567,7 +567,7 @@ def get_portfolio_state(email: str, portfolio_id: Optional[str] = None) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    from config import CONSERVATIVE_CONFIG, AGGRESSIVE_CONFIG
+    from config import CONSERVATIVE_CONFIG, AGGRESSIVE_CONFIG, BALANCED_CONFIG
 
     EMAIL   = "test@buildmyportfolio.ai"
     CAPITAL = 100_000.0
@@ -604,7 +604,7 @@ if __name__ == "__main__":
     print("="*60)
     dry = rebalance_portfolio(
         email    = EMAIL,
-        config   = AGGRESSIVE_CONFIG,
+        config   = BALANCED_CONFIG,
         nlp_input= "I think the market is going up, be more aggressive",
         dry_run  = True,
     )
@@ -619,7 +619,7 @@ if __name__ == "__main__":
     print("="*60)
     result2 = rebalance_portfolio(
         email     = EMAIL,
-        config    = AGGRESSIVE_CONFIG,
+        config    = BALANCED_CONFIG,
         nlp_input = "I think the market is going up, be more aggressive",
         dry_run   = False,
     )
@@ -647,3 +647,4 @@ if __name__ == "__main__":
         print(f"  {cls['asset_class']:<15} ₹{cls['current_value_inr']:>10,.2f}  "
               f"({cls['weight_pct']}%)  PnL: ₹{cls['unrealized_pnl_inr']:,.2f}")
 
+    
