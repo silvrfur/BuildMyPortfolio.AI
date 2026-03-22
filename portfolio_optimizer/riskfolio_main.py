@@ -5,8 +5,8 @@ import riskfolio as rp
 import matplotlib.pyplot as plt
 import json
 from datetime import datetime
-from assets import assets, asset_classes, constraints_data
-from config import CONFIG
+from .assets import assets, asset_classes, constraints_data
+from .config import CONFIG
 
 
 def run_portfolio(

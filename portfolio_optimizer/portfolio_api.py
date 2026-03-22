@@ -22,17 +22,21 @@ from decimal import Decimal
 from datetime import date, datetime
 from typing import Optional
 
-from database import init_db
-from riskfolio_main import run_portfolio
-from portfolio_engine import (
+from latent_state_engine import run_bayesian
+from integration.theta_adapter import select_config_from_theta
+from nlp.signal_extractor import extract_schema_variables
+
+from .database import init_db
+from .riskfolio_main import run_portfolio
+from .portfolio_engine import (
     get_or_create_user,
     execute_initial_buy,
     compute_rebalance,
     execute_rebalance,
     get_portfolio_snapshot,
 )
-from models import Portfolio, OptimizerRun
-from database import SessionLocal
+from .models import Portfolio, OptimizerRun
+from .database import SessionLocal
 
 # Initialise DB tables on import — safe to call multiple times
 init_db()
@@ -381,6 +385,31 @@ def initialize_portfolio(
 # PUBLIC API — ENTRY POINT 2: REBALANCE PORTFOLIO
 # ─────────────────────────────────────────────────────────────────────────────
 
+def should_trigger_rebalance(theta) -> bool:
+    """
+    Decide whether behavioral shift is strong enough
+    """
+
+    if hasattr(theta, "model_dump"):
+        theta = theta.model_dump()
+
+    risk = theta["risk_sensitivity"]
+    patience = theta["patience_level"]
+    control = theta["controlled_perception"]
+
+    # Simple rules for now
+    if risk > 0.75:
+        return True  # panic / high risk sensitivity
+
+    if patience < 0.3:
+        return True  # impulsive behavior
+
+    if control < 0.3:
+        return True  # emotional instability
+
+    return False
+
+
 def rebalance_portfolio(
     email:         str,
     config:        dict,
@@ -416,7 +445,7 @@ def rebalance_portfolio(
     # 1. Resolve user and portfolio
     db = SessionLocal()
     try:
-        from models import User
+        from .models import User
         user = db.query(User).filter(User.email == email).first()
         if not user:
             raise ValueError(f"User {email} not found. Call initialize_portfolio() first.")
@@ -493,6 +522,47 @@ def rebalance_portfolio(
         trade_plan        = trade_plan,
     )
 
+def rebalance_portfolio_with_behavior(
+    email: str,
+    user_text: str,
+    portfolio_id: Optional[str] = None,
+    threshold_pct: float = 2.0,
+    dry_run: bool = False,
+) -> dict:
+    """
+    Rebalance only if behavioral shift is significant
+    """
+
+    # 1. NLP → signals
+    signals = extract_schema_variables(user_text)
+
+    # 2. Signals → theta
+    theta = run_bayesian(signals)
+
+    # 3. Decide if rebalance is needed
+    if not should_trigger_rebalance(theta):
+        return {
+            "status": "no_rebalance",
+            "reason": "behavioral change not significant",
+            "theta": theta,
+        }
+
+    # 4. Convert theta → config
+    config = select_config_from_theta(theta)
+
+    print("\n[DEBUG] Behavioral trigger activated")
+    print("[DEBUG] Theta:", theta)
+    print("[DEBUG] New profile:", config.get("profile"))
+
+    # 5. Call existing rebalance
+    return rebalance_portfolio(
+        email=email,
+        config=config,
+        portfolio_id=portfolio_id,
+        nlp_input=user_text,
+        threshold_pct=threshold_pct,
+        dry_run=dry_run,
+    )
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PUBLIC API — EXTRA: GET CURRENT STATE (no optimizer run)
@@ -515,7 +585,7 @@ def get_portfolio_state(email: str, portfolio_id: Optional[str] = None) -> dict:
     """
     db = SessionLocal()
     try:
-        from models import User
+        from .models import User
         user = db.query(User).filter(User.email == email).first()
         if not user:
             raise ValueError(f"User {email} not found.")
@@ -567,7 +637,7 @@ def get_portfolio_state(email: str, portfolio_id: Optional[str] = None) -> dict:
 # ─────────────────────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    from config import CONSERVATIVE_CONFIG, AGGRESSIVE_CONFIG, BALANCED_CONFIG
+    from .config import CONSERVATIVE_CONFIG, AGGRESSIVE_CONFIG, BALANCED_CONFIG
 
     EMAIL   = "test@buildmyportfolio.ai"
     CAPITAL = 100_000.0
