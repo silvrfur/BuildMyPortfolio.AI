@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import math
 import random
+import sys
 from calendar import monthrange
 from datetime import date, timedelta
 from pathlib import Path
@@ -27,6 +28,9 @@ from nlp.signal_extractor import extract_schema_variables
 from .portfolio_api import should_trigger_rebalance
 from .simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
 from .simulator import SimPortfolio, apply_event, get_price_history, get_prices_on_date, run_optimizer_historical
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 
 ROOT_DIR = Path(__file__).resolve().parents[1]
@@ -369,6 +373,7 @@ def run_latent_state_simulation(
     simulate_portfolio: bool = True,
     price_history: Optional[pd.DataFrame] = None,
     verbose: bool = True,
+    log_prefix: str = "H2",
 ) -> dict:
     latent_scenario = generate_latent_scenario(
         scenario,
@@ -377,7 +382,7 @@ def run_latent_state_simulation(
     )
 
     if verbose:
-        print(f"\n[H2] Running latent-state simulation for {latent_scenario['name']}")
+        print(f"\n[{log_prefix}] Running latent-state simulation for {latent_scenario['name']}")
 
     engine = BayesianLatentEngine()
     previous_chat_date = None
@@ -574,6 +579,7 @@ def run_all_latent_state_simulations(
     seed: int = 42,
     save_plots: bool = True,
     verbose: bool = True,
+    log_prefix: str = "H2",
 ) -> dict:
     _ensure_output_dirs()
     history = get_price_history()
@@ -586,6 +592,7 @@ def run_all_latent_state_simulations(
                 seed=seed + index,
                 price_history=history,
                 verbose=verbose,
+                log_prefix=log_prefix,
             )
         )
 
@@ -622,8 +629,8 @@ def run_all_latent_state_simulations(
         _save_summary_plots(results)
 
     if verbose:
-        print(f"[H2] Saved latent-state results to {save_target}")
-        print(f"[H2] Saved plots to {PLOTS_DIR}")
+        print(f"[{log_prefix}] Saved latent-state results to {save_target}")
+        print(f"[{log_prefix}] Saved plots to {PLOTS_DIR}")
 
     return payload
 

@@ -18,6 +18,7 @@ import os
 import math
 import copy
 import json
+import sys
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -30,6 +31,9 @@ try:
 except ImportError:
     from simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
     from assets import assets, asset_classes, constraints_data
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ── We import riskfolio / portfolio machinery lazily inside functions
 # to allow the simulator to be imported without triggering DB init etc.

@@ -263,7 +263,7 @@ def _validate():
             f"  {missing_asset}"
         )
 
-    print(f"[assets.py] ✓ Validation passed — "
+    print(f"[assets.py] Validation passed - "
           f"{len(assets)} unique tickers across "
           f"{len(set(asset_classes.values()))} asset classes.")
 

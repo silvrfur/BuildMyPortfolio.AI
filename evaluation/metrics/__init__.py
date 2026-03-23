@@ -8,6 +8,25 @@ from .latent_metrics import (
     compute_static_baseline_metrics,
     summarize_event_errors,
 )
+from .H1 import (
+    average_error_by_month,
+    build_cross_investor_error_cdf,
+    build_error_cdf,
+    build_static_misalignment_series,
+    compare_growth_rate_windows,
+    compare_static_profile_to_dynamic,
+    compute_error_growth_rate,
+    summarize_static_misalignment,
+)
+from .H3 import (
+    cox_hazard_ratio,
+    compute_portfolio_outcomes,
+    kaplan_meier_curve,
+    log_rank_test,
+    median_retention_time,
+    summarize_portfolio_outcomes_by_group,
+    summarize_survival_by_group,
+)
 
 __all__ = [
     "LATENT_KEYS",
@@ -18,4 +37,19 @@ __all__ = [
     "compute_rmse",
     "compute_static_baseline_metrics",
     "summarize_event_errors",
+    "build_error_cdf",
+    "build_cross_investor_error_cdf",
+    "average_error_by_month",
+    "build_static_misalignment_series",
+    "compute_error_growth_rate",
+    "compare_growth_rate_windows",
+    "compare_static_profile_to_dynamic",
+    "summarize_static_misalignment",
+    "cox_hazard_ratio",
+    "compute_portfolio_outcomes",
+    "kaplan_meier_curve",
+    "log_rank_test",
+    "median_retention_time",
+    "summarize_portfolio_outcomes_by_group",
+    "summarize_survival_by_group",
 ]
