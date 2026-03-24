@@ -1,3 +1,4 @@
+
 """
 streamlit_app.py — BuildMyPortfolio.AI Simulation Dashboard
 
@@ -98,9 +99,7 @@ with st.sidebar:
         if st.button("▶ Run All Simulations", type="primary", use_container_width=True):
             with st.spinner("Running simulations (this takes 5–10 min)..."):
                 from simulator import run_all_simulations
-                from latent_state_simulator import run_all_latent_state_simulations
                 results = run_all_simulations(verbose=False)
-                run_all_latent_state_simulations(verbose=False)
                 st.cache_data.clear()
                 st.rerun()
         st.stop()
@@ -108,9 +107,7 @@ with st.sidebar:
         if st.button("🔄 Re-run Simulations", use_container_width=True):
             with st.spinner("Running simulations..."):
                 from simulator import run_all_simulations
-                from latent_state_simulator import run_all_latent_state_simulations
                 results = run_all_simulations(verbose=False)
-                run_all_latent_state_simulations(verbose=False)
                 st.cache_data.clear()
                 st.rerun()
 
@@ -346,7 +343,8 @@ with tab2:
             profile = ev["profile"]
             color   = PROFILE_COLORS.get(profile, "#666")
             fig.add_vline(
-                x=ev["date"], line_dash="dot",
+                x=pd.Timestamp(ev["date"]).timestamp() * 1000,
+                line_dash="dot",
                 line_color=color, opacity=0.6,
                 annotation_text=profile[:4].upper(),
                 annotation_font_size=10,
