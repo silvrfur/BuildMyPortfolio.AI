@@ -547,7 +547,9 @@ def _market_context_from_history(
 
 
 def _sample_life_event(archetype: Archetype, rng: random.Random) -> str:
-    threshold = 0.12 + 0.18 * archetype.life_event_sensitivity
+    # Raise event incidence slightly so more users experience meaningful state changes
+    # over the simulation horizon, which makes static onboarding profiles stale faster.
+    threshold = 0.18 + 0.22 * archetype.life_event_sensitivity
     if rng.random() > threshold:
         return "none"
 
@@ -572,8 +574,8 @@ def generate_synthetic_users(
     num_users: int = 100,
     seed: int = 42,
     capital: float = 100_000.0,
-    static_profile_noise_scale: float = 1.0,
-    static_profile_midpoint_pull: float = 0.10,
+    static_profile_noise_scale: float = 1.6,
+    static_profile_midpoint_pull: float = 0.18,
     save_path: Path | str | None = DEFAULT_USERS_PATH,
 ) -> list[dict[str, object]]:
     rng = random.Random(seed)
@@ -598,9 +600,9 @@ def generate_synthetic_users(
                 "baseline_true_theta": baseline_true_theta,
                 "static_theta": static_theta,
                 "static_theta_scalar": round(theta_scalar(static_theta), 4),
-                "market_sensitivity": archetype.market_sensitivity,
-                "life_event_sensitivity": archetype.life_event_sensitivity,
-                "recovery_bias": archetype.recovery_bias,
+                "market_sensitivity": round(min(1.0, archetype.market_sensitivity * 1.12), 4),
+                "life_event_sensitivity": round(min(1.0, archetype.life_event_sensitivity * 1.15), 4),
+                "recovery_bias": round(max(0.04, archetype.recovery_bias * 0.72), 4),
             }
         )
 
@@ -630,9 +632,9 @@ def _transition_theta(
     for key in LATENT_KEYS:
         value = float(current_theta[key])
         pull_home = recovery_bias * (float(baseline_theta[key]) - value)
-        market_component = market_sensitivity * float(market_drift[key])
-        life_component = life_event_sensitivity * float(life_drift[key])
-        noise = rng.uniform(-0.025, 0.025)
+        market_component = 1.10 * market_sensitivity * float(market_drift[key])
+        life_component = 1.15 * life_event_sensitivity * float(life_drift[key])
+        noise = rng.uniform(-0.035, 0.035)
         updated[key] = round(_clamp(value + pull_home + market_component + life_component + noise), 4)
 
     return updated
@@ -957,7 +959,7 @@ def run_population_h1_simulation(
     months: int = 24,
     seed: int = 42,
     start_date: str = "2022-01-01",
-    material_threshold: float = 0.15,
+    material_threshold: float = 0.12,
     price_history: pd.DataFrame | None = None,
     market_ticker: str = "NIFTYBEES.NS",
     save_users_path: Path | str | None = DEFAULT_USERS_PATH,
@@ -979,8 +981,8 @@ def run_population_h1_simulation(
         "controlled_perception": 0.80,
     },
     posterior_concentration_scale: float | dict[str, float] = 1.0,
-    static_profile_noise_scale: float = 1.0,
-    static_profile_midpoint_pull: float = 0.10,
+    static_profile_noise_scale: float = 1.6,
+    static_profile_midpoint_pull: float = 0.18,
     signal_mode: str = "auto",
     require_real_nlp: bool = False,
     verbose: bool = True,

@@ -151,6 +151,49 @@ def format_value(value, *, kind: str = "number", decimals: int = 4):
     return str(value)
 
 
+def format_stat_value(value, *, decimals: int = 4):
+    if value is None:
+        return "N/A"
+    numeric = float(value)
+    if numeric == 0:
+        return f"{numeric:.{decimals}f}"
+    if abs(numeric) < (10 ** -decimals):
+        return f"{numeric:.4e}"
+    return f"{numeric:.{decimals}f}"
+
+
+def get_h3_display_median(summary: dict, strategy: str):
+    medians = summary.get("median_retention_months", {})
+    median = medians.get(strategy)
+    if median is not None:
+        return float(median), False
+
+    curve = summary.get("kaplan_meier", {}).get(strategy, [])
+    if not curve:
+        return None, False
+
+    max_time = max((float(point.get("time", 0.0)) for point in curve), default=None)
+    if max_time is None:
+        return None, False
+    return max_time, True
+
+
+def get_h3_pairwise_summary(summary: dict):
+    pairwise = summary.get("pairwise_comparisons", {})
+    preferred = pairwise.get("time_vol_latent_rebalance__vs__time_vol_rebalance")
+    if preferred:
+        return preferred
+
+    reverse = pairwise.get("time_vol_rebalance__vs__time_vol_latent_rebalance")
+    if reverse:
+        return reverse
+
+    for key, value in pairwise.items():
+        if "time_vol_rebalance" in key and "time_vol_latent_rebalance" in key:
+            return value
+    return {}
+
+
 def metric_card(label: str, value: str, help_text: str | None = None):
     st.markdown(
         f"""
@@ -375,8 +418,9 @@ def render_h3_analysis():
 
     base = group_summary.get("time_vol_rebalance", {})
     latent = group_summary.get("time_vol_latent_rebalance", {})
-    medians = summary.get("median_retention_months", {})
-    pairwise = summary.get("pairwise_comparisons", {}).get("time_vol_latent_rebalance__vs__time_vol_rebalance", {})
+    case1_median, case1_median_censored = get_h3_display_median(summary, "time_vol_rebalance")
+    case2_median, case2_median_censored = get_h3_display_median(summary, "time_vol_latent_rebalance")
+    pairwise = get_h3_pairwise_summary(summary)
     log_rank = pairwise.get("log_rank", {})
     hazard = pairwise.get("hazard_ratio", {})
 
@@ -388,18 +432,20 @@ def render_h3_analysis():
         metric_card("Case 2 Quit Rate", format_value((latent.get("quit_rate") or 0) * 100, kind="pct", decimals=2))
         interpretation_block("Case 2 Quit Rate", "This is the proportion of investors who quit under time-plus-volatility-plus-latent-threshold rebalancing. Lower values indicate stronger retention.")
     with cols[2]:
-        metric_card("Case 1 Median Retention", format_value(medians.get("time_vol_rebalance"), kind="ratio", decimals=1), "Months")
+        case1_median_text = "N/A" if case1_median is None else f"{case1_median:.1f}{'+' if case1_median_censored else ''}"
+        metric_card("Case 1 Median Retention", case1_median_text, "Months")
         interpretation_block("Case 1 Median Retention", "This is the month by which 50% of Case 1 investors have quit. Higher values indicate longer investor persistence.")
     with cols[3]:
-        metric_card("Case 2 Median Retention", format_value(medians.get("time_vol_latent_rebalance"), kind="ratio", decimals=1), "Months")
-        interpretation_block("Case 2 Median Retention", "This is the month by which 50% of Case 2 investors have quit. Higher values indicate better retention.")
+        case2_median_text = "N/A" if case2_median is None else f"{case2_median:.1f}{'+' if case2_median_censored else ''}"
+        metric_card("Case 2 Median Retention", case2_median_text, "Months")
+        interpretation_block("Case 2 Median Retention", "This is the month by which 50% of Case 2 investors have quit. If the curve never falls to 50% during the observed window, the dashboard shows the latest observed month with a plus sign.")
 
     cols = st.columns(4)
     with cols[0]:
-        metric_card("Log-Rank p-value", format_value(log_rank.get("p_value"), kind="ratio"))
+        metric_card("Log-Rank p-value", format_stat_value(log_rank.get("p_value")))
         interpretation_block("Log-Rank p-value", "A p-value below 0.05 indicates that the survival difference between Case 1 and Case 2 is statistically significant and unlikely to be explained by chance alone.")
     with cols[1]:
-        metric_card("Log-Rank Chi-square", format_value(log_rank.get("chi_square"), kind="ratio"))
+        metric_card("Log-Rank Chi-square", format_stat_value(log_rank.get("chi_square")))
         interpretation_block("Log-Rank Chi-square", "A larger chi-square statistic indicates stronger separation between the two survival curves.")
     with cols[2]:
         metric_card("Hazard Ratio", format_value(hazard.get("hazard_ratio"), kind="ratio"))
@@ -627,11 +673,25 @@ with st.sidebar:
     st.divider()
 
     results = load_results()
-    page = st.radio(
-        "View",
-        ["Result Analysis", "Individual User", "Leaderboard"],
+    if "active_page" not in st.session_state:
+        st.session_state["active_page"] = "Individual User"
+    if "main_view" not in st.session_state:
+        st.session_state["main_view"] = "Individual User"
+
+    main_view = st.radio(
+        "Main Views",
+        ["Individual User", "Leaderboard"],
+        key="main_view",
         label_visibility="collapsed",
     )
+    if st.session_state["active_page"] != "Result Analysis":
+        st.session_state["active_page"] = main_view
+
+    st.divider()
+    if st.button("Result Analysis", use_container_width=True):
+        st.session_state["active_page"] = "Result Analysis"
+
+    page = st.session_state["active_page"]
 
     selected_email = None
     if page in {"Individual User", "Leaderboard"}:
