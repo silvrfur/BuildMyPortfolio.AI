@@ -10,9 +10,9 @@ from latent_state_engine.mapper import map_signals_to_latent
 def run_bayesian(
     nlp_signals: Mapping[str, float],
     *,
-    strength: float = 0.5,
+    strength: float | Mapping[str, float] = 0.5,
     include_uncertainty: bool = False,
-    decay_factor: float | None = None,
+    decay_factor: float | Mapping[str, float] | None = None,
     engine: BayesianLatentEngine | None = None,
 ) -> dict[str, float] | dict[str, dict[str, float]]:
     """
@@ -47,9 +47,9 @@ def run_bayesian(
 def run_bayesian_from_any(
     nlp_signals: Mapping[str, Any],
     *,
-    strength: float = 0.5,
+    strength: float | Mapping[str, float] = 0.5,
     include_uncertainty: bool = False,
-    decay_factor: float | None = None,
+    decay_factor: float | Mapping[str, float] | None = None,
     engine: BayesianLatentEngine | None = None,
 ) -> dict[str, float] | dict[str, dict[str, float]]:
     """

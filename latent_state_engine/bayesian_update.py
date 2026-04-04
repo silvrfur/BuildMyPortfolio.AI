@@ -1,6 +1,7 @@
 # from __future__ import annotations
 
 from dataclasses import dataclass
+from typing import Mapping
 from typing import Literal
 
 from latent_state_engine.schemas import LatentStateSchema
@@ -45,7 +46,12 @@ class BayesianLatentEngine:
             "controlled_perception": BetaState(),
         }
 
-    def update(self, latent_name: LatentName, evidence: float, strength: float = 0.5) -> None:
+    def update(
+        self,
+        latent_name: LatentName,
+        evidence: float,
+        strength: float | Mapping[str, float] = 0.5,
+    ) -> None:
         """
         Update a single latent state using fractional evidence.
 
@@ -53,13 +59,20 @@ class BayesianLatentEngine:
         `strength` controls how strongly one observation affects belief.
         """
         evidence = clamp(evidence)
-        strength = max(0.0, strength)
+        if isinstance(strength, Mapping):
+            strength_value = max(0.0, float(strength.get(latent_name, 0.5)))
+        else:
+            strength_value = max(0.0, float(strength))
 
         state = self.states[latent_name]
-        state.alpha += strength * evidence
-        state.beta += strength * (1.0 - evidence)
+        state.alpha += strength_value * evidence
+        state.beta += strength_value * (1.0 - evidence)
 
-    def update_batch(self, evidence: LatentStateSchema | dict[str, float], strength: float = 0.5) -> None:
+    def update_batch(
+        self,
+        evidence: LatentStateSchema | dict[str, float],
+        strength: float | Mapping[str, float] = 0.5,
+    ) -> None:
         """Update all latent variables at once."""
         latent = evidence if isinstance(evidence, LatentStateSchema) else LatentStateSchema.model_validate(evidence)
         payload = latent.model_dump()
@@ -82,13 +95,19 @@ class BayesianLatentEngine:
             for name, state in self.states.items()
         }
 
-    def apply_decay(self, decay_factor: float = 0.99) -> None:
+    def apply_decay(self, decay_factor: float | Mapping[str, float] = 0.99) -> None:
         """
         Apply temporal decay so older evidence loses influence.
         Values are clamped to keep alpha/beta numerically stable and non-negative.
         """
-        decay_factor = clamp(decay_factor)
+        if isinstance(decay_factor, Mapping):
+            for latent_name, state in self.states.items():
+                current_decay = clamp(float(decay_factor.get(latent_name, 0.99)))
+                state.alpha = max(1e-9, state.alpha * current_decay)
+                state.beta = max(1e-9, state.beta * current_decay)
+            return
 
+        current_decay = clamp(float(decay_factor))
         for state in self.states.values():
-            state.alpha = max(1e-9, state.alpha * decay_factor)
-            state.beta = max(1e-9, state.beta * decay_factor)
+            state.alpha = max(1e-9, state.alpha * current_decay)
+            state.beta = max(1e-9, state.beta * current_decay)

@@ -1,0 +1,2203 @@
+{
+  "user_profile": {
+    "user_id": "sim_user_056",
+    "email": "sim_user_056@example.com",
+    "name": "Simulated User 056",
+    "capital": 100000.0,
+    "archetype": "balanced_planner",
+    "baseline_true_theta": {
+      "risk_sensitivity": 0.4702,
+      "patience_level": 0.7078,
+      "analytical_thinking": 0.6672,
+      "controlled_perception": 0.741
+    },
+    "static_theta": {
+      "risk_sensitivity": 0.5123,
+      "patience_level": 0.6983,
+      "analytical_thinking": 0.6724,
+      "controlled_perception": 0.7174
+    },
+    "static_theta_scalar": 0.6501,
+    "market_sensitivity": 0.45,
+    "life_event_sensitivity": 0.35,
+    "recovery_bias": 0.22
+  },
+  "simulation_result": {
+    "user_id": "sim_user_056",
+    "email": "sim_user_056@example.com",
+    "name": "Simulated User 056",
+    "archetype": "balanced_planner",
+    "baseline_true_theta": {
+      "risk_sensitivity": 0.4702,
+      "patience_level": 0.7078,
+      "analytical_thinking": 0.6672,
+      "controlled_perception": 0.741
+    },
+    "static_theta": {
+      "risk_sensitivity": 0.5123,
+      "patience_level": 0.6983,
+      "analytical_thinking": 0.6724,
+      "controlled_perception": 0.7174
+    },
+    "static_profile_origin": "self_reported_onboarding_preference",
+    "events": [
+      {
+        "date": "2022-01-01",
+        "month_index": 0,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.1064,
+        "market_drawdown_pct": -5.5905,
+        "market_volatility_score": 0.3866,
+        "life_event": "salary_growth",
+        "life_event_description": "improved income stability",
+        "theta_prior": {
+          "risk_sensitivity": 0.4702,
+          "patience_level": 0.7078,
+          "analytical_thinking": 0.6672,
+          "controlled_perception": 0.741
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4674,
+          "patience_level": 0.6865,
+          "analytical_thinking": 0.6622,
+          "controlled_perception": 0.7507
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.48473642156862745,
+          "patience_level": 0.5352463725490195,
+          "analytical_thinking": 0.5257119607843137,
+          "controlled_perception": 0.549368431372549
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6417,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.027,
+            "patience_level": -0.0175,
+            "analytical_thinking": 0.0087,
+            "controlled_perception": -0.0239
+          },
+          "life_event_drift": {
+            "risk_sensitivity": -0.0175,
+            "patience_level": 0.0105,
+            "analytical_thinking": 0.007,
+            "controlled_perception": 0.0245
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.11%, drawdown -5.59%, volatility score 0.39). Life context: salary_growth. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.008399999999999963
+      },
+      {
+        "date": "2022-02-01",
+        "month_index": 1,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 1.0171,
+        "market_drawdown_pct": -4.2064,
+        "market_volatility_score": 0.3922,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4674,
+          "patience_level": 0.6865,
+          "analytical_thinking": 0.6622,
+          "controlled_perception": 0.7507
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4721,
+          "patience_level": 0.6778,
+          "analytical_thinking": 0.6831,
+          "controlled_perception": 0.763
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.475075800400098,
+          "patience_level": 0.556815,
+          "analytical_thinking": 0.5442679897117662,
+          "controlled_perception": 0.5835210769984487
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.649,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0151,
+            "patience_level": 0.0101,
+            "analytical_thinking": 0.0088,
+            "controlled_perception": 0.0099
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +1.02%, drawdown -4.21%, volatility score 0.39). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.0010999999999999899
+      },
+      {
+        "date": "2022-03-01",
+        "month_index": 2,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -1.7612,
+        "market_drawdown_pct": -8.1755,
+        "market_volatility_score": 0.5703,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4721,
+          "patience_level": 0.6778,
+          "analytical_thinking": 0.6831,
+          "controlled_perception": 0.763
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4991,
+          "patience_level": 0.65,
+          "analytical_thinking": 0.716,
+          "controlled_perception": 0.7102
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4731318413864048,
+          "patience_level": 0.5677384226733724,
+          "analytical_thinking": 0.5573958414903429,
+          "controlled_perception": 0.5998320087013554
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6438,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.041,
+            "patience_level": -0.0268,
+            "analytical_thinking": 0.0124,
+            "controlled_perception": -0.0352
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -1.76%, drawdown -8.18%, volatility score 0.57). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.006299999999999972
+      },
+      {
+        "date": "2022-04-01",
+        "month_index": 3,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 5.7579,
+        "market_drawdown_pct": -3.8176,
+        "market_volatility_score": 0.4392,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4991,
+          "patience_level": 0.65,
+          "analytical_thinking": 0.716,
+          "controlled_perception": 0.7102
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4488,
+          "patience_level": 0.6619,
+          "analytical_thinking": 0.7238,
+          "controlled_perception": 0.7075
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.466134294899054,
+          "patience_level": 0.5782388129402328,
+          "analytical_thinking": 0.570357295707015,
+          "controlled_perception": 0.6122930385885248
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6355,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0226,
+            "patience_level": 0.0155,
+            "analytical_thinking": 0.0099,
+            "controlled_perception": 0.0142
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +5.76%, drawdown -3.82%, volatility score 0.44). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.014600000000000057
+      },
+      {
+        "date": "2022-05-01",
+        "month_index": 4,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.9561,
+        "market_drawdown_pct": -5.0003,
+        "market_volatility_score": 0.426,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4488,
+          "patience_level": 0.6619,
+          "analytical_thinking": 0.7238,
+          "controlled_perception": 0.7075
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4942,
+          "patience_level": 0.6586,
+          "analytical_thinking": 0.745,
+          "controlled_perception": 0.6882
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4656685345688903,
+          "patience_level": 0.5851801152927135,
+          "analytical_thinking": 0.579212917147703,
+          "controlled_perception": 0.6192616239433051
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6465,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0299,
+            "patience_level": -0.0198,
+            "analytical_thinking": 0.0094,
+            "controlled_perception": -0.0257
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.96%, drawdown -5.00%, volatility score 0.43). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.0036000000000000476
+      },
+      {
+        "date": "2022-06-01",
+        "month_index": 5,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -2.9873,
+        "market_drawdown_pct": -7.9922,
+        "market_volatility_score": 0.5232,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4942,
+          "patience_level": 0.6586,
+          "analytical_thinking": 0.745,
+          "controlled_perception": 0.6882
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5297,
+          "patience_level": 0.631,
+          "analytical_thinking": 0.7594,
+          "controlled_perception": 0.6628
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.46898439962716343,
+          "patience_level": 0.5875530295253241,
+          "analytical_thinking": 0.5852107542001367,
+          "controlled_perception": 0.6219157588378178
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6457,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.039,
+            "patience_level": -0.0254,
+            "analytical_thinking": 0.0111,
+            "controlled_perception": -0.0326
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -2.99%, drawdown -7.99%, volatility score 0.52). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.0043999999999999595
+      },
+      {
+        "date": "2022-07-01",
+        "month_index": 6,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -5.0033,
+        "market_drawdown_pct": -12.0652,
+        "market_volatility_score": 0.4038,
+        "life_event": "job_uncertainty",
+        "life_event_description": "job or income uncertainty",
+        "theta_prior": {
+          "risk_sensitivity": 0.5297,
+          "patience_level": 0.631,
+          "analytical_thinking": 0.7594,
+          "controlled_perception": 0.6628
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5898,
+          "patience_level": 0.6082,
+          "analytical_thinking": 0.75,
+          "controlled_perception": 0.5949
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4778214448535592,
+          "patience_level": 0.5866489812886354,
+          "analytical_thinking": 0.5865448272388994,
+          "controlled_perception": 0.6173734871091383
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6357,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0349,
+            "patience_level": -0.0213,
+            "analytical_thinking": 0.008,
+            "controlled_perception": -0.0283
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.042,
+            "patience_level": -0.028,
+            "analytical_thinking": -0.007,
+            "controlled_perception": -0.042
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -5.00%, drawdown -12.07%, volatility score 0.40). Life context: job_uncertainty. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.014399999999999968
+      },
+      {
+        "date": "2022-08-01",
+        "month_index": 7,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 9.8986,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.2717,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5898,
+          "patience_level": 0.6082,
+          "analytical_thinking": 0.75,
+          "controlled_perception": 0.5949
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5496,
+          "patience_level": 0.6685,
+          "analytical_thinking": 0.757,
+          "controlled_perception": 0.6532
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.48116180339596787,
+          "patience_level": 0.5911719478046652,
+          "analytical_thinking": 0.5899907318392471,
+          "controlled_perception": 0.6188045423531428
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6571,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0291,
+            "patience_level": 0.0201,
+            "analytical_thinking": 0.0061,
+            "controlled_perception": 0.0179
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +9.90%, drawdown +0.00%, volatility score 0.27). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.007000000000000006
+      },
+      {
+        "date": "2022-09-01",
+        "month_index": 8,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.8305,
+        "market_drawdown_pct": -1.9876,
+        "market_volatility_score": 0.3385,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.5496,
+          "patience_level": 0.6685,
+          "analytical_thinking": 0.757,
+          "controlled_perception": 0.6532
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.578,
+          "patience_level": 0.6508,
+          "analytical_thinking": 0.7096,
+          "controlled_perception": 0.6264
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.48638098815405695,
+          "patience_level": 0.593334896894701,
+          "analytical_thinking": 0.5896701760747792,
+          "controlled_perception": 0.6177067853633821
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6412,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.018,
+            "patience_level": 0.0122,
+            "analytical_thinking": 0.0076,
+            "controlled_perception": 0.0116
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.056,
+            "patience_level": -0.042,
+            "analytical_thinking": -0.021,
+            "controlled_perception": -0.056
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.83%, drawdown -1.99%, volatility score 0.34). Life context: health_stress. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.008900000000000019
+      },
+      {
+        "date": "2022-10-01",
+        "month_index": 9,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -2.6014,
+        "market_drawdown_pct": -5.1384,
+        "market_volatility_score": 0.3492,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.578,
+          "patience_level": 0.6508,
+          "analytical_thinking": 0.7096,
+          "controlled_perception": 0.6264
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5751,
+          "patience_level": 0.6488,
+          "analytical_thinking": 0.7082,
+          "controlled_perception": 0.6129
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.490837522986898,
+          "patience_level": 0.5950817827389728,
+          "analytical_thinking": 0.5893252574794018,
+          "controlled_perception": 0.6158220429112286
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6362,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0264,
+            "patience_level": -0.0174,
+            "analytical_thinking": 0.0073,
+            "controlled_perception": -0.0216
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -2.60%, drawdown -5.14%, volatility score 0.35). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.013900000000000023
+      },
+      {
+        "date": "2022-11-01",
+        "month_index": 10,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 7.5569,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.3375,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5751,
+          "patience_level": 0.6488,
+          "analytical_thinking": 0.7082,
+          "controlled_perception": 0.6129
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5214,
+          "patience_level": 0.6668,
+          "analytical_thinking": 0.7059,
+          "controlled_perception": 0.647
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.49091943422958934,
+          "patience_level": 0.5983424224371637,
+          "analytical_thinking": 0.5908071693200359,
+          "controlled_perception": 0.6168970677114864
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6353,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0254,
+            "patience_level": 0.0175,
+            "analytical_thinking": 0.0076,
+            "controlled_perception": 0.0158
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +7.56%, drawdown +0.00%, volatility score 0.34). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.014800000000000035
+      },
+      {
+        "date": "2022-12-01",
+        "month_index": 11,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 3.8186,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.2124,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5214,
+          "patience_level": 0.6668,
+          "analytical_thinking": 0.7059,
+          "controlled_perception": 0.647
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4855,
+          "patience_level": 0.6674,
+          "analytical_thinking": 0.702,
+          "controlled_perception": 0.6945
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4883079369385694,
+          "patience_level": 0.6016049043487546,
+          "analytical_thinking": 0.5933142190145467,
+          "controlled_perception": 0.6211130829201795
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6373,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0195,
+            "patience_level": 0.0133,
+            "analytical_thinking": 0.0048,
+            "controlled_perception": 0.0124
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +3.82%, drawdown +0.00%, volatility score 0.21). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.012800000000000034
+      },
+      {
+        "date": "2023-01-01",
+        "month_index": 12,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.6489,
+        "market_drawdown_pct": -3.6489,
+        "market_volatility_score": 0.2635,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4855,
+          "patience_level": 0.6674,
+          "analytical_thinking": 0.702,
+          "controlled_perception": 0.6945
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5139,
+          "patience_level": 0.6855,
+          "analytical_thinking": 0.7098,
+          "controlled_perception": 0.6697
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.48786989031429695,
+          "patience_level": 0.6052219457997888,
+          "analytical_thinking": 0.5948549533972479,
+          "controlled_perception": 0.6231383087847587
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6447,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0212,
+            "patience_level": -0.0142,
+            "analytical_thinking": 0.0051,
+            "controlled_perception": -0.0162
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.65%, drawdown -3.65%, volatility score 0.26). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.00539999999999996
+      },
+      {
+        "date": "2023-02-01",
+        "month_index": 13,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.1153,
+        "market_drawdown_pct": -6.0377,
+        "market_volatility_score": 0.2699,
+        "life_event": "family_expense_shock",
+        "life_event_description": "unexpected family financial pressure",
+        "theta_prior": {
+          "risk_sensitivity": 0.5139,
+          "patience_level": 0.6855,
+          "analytical_thinking": 0.7098,
+          "controlled_perception": 0.6697
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5776,
+          "patience_level": 0.6522,
+          "analytical_thinking": 0.6774,
+          "controlled_perception": 0.6213
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.49136784943234085,
+          "patience_level": 0.6060185696763488,
+          "analytical_thinking": 0.593258594761324,
+          "controlled_perception": 0.6217544572841062
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6321,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0222,
+            "patience_level": -0.0141,
+            "analytical_thinking": 0.0054,
+            "controlled_perception": -0.0178
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.049,
+            "patience_level": -0.035,
+            "analytical_thinking": -0.0105,
+            "controlled_perception": -0.035
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.12%, drawdown -6.04%, volatility score 0.27). Life context: family_expense_shock. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.018000000000000016
+      },
+      {
+        "date": "2023-03-01",
+        "month_index": 14,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -1.1166,
+        "market_drawdown_pct": -6.6061,
+        "market_volatility_score": 0.2269,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5776,
+          "patience_level": 0.6522,
+          "analytical_thinking": 0.6774,
+          "controlled_perception": 0.6213
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5702,
+          "patience_level": 0.6321,
+          "analytical_thinking": 0.6914,
+          "controlled_perception": 0.6458
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4938598101054936,
+          "patience_level": 0.6057596349674992,
+          "analytical_thinking": 0.5925869852340556,
+          "controlled_perception": 0.6219029797521758
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6349,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0182,
+            "patience_level": -0.0109,
+            "analytical_thinking": 0.0049,
+            "controlled_perception": -0.0158
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -1.12%, drawdown -6.61%, volatility score 0.23). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.015199999999999991
+      },
+      {
+        "date": "2023-04-01",
+        "month_index": 15,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 0.0843,
+        "market_drawdown_pct": -4.9179,
+        "market_volatility_score": 0.3031,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5702,
+          "patience_level": 0.6321,
+          "analytical_thinking": 0.6914,
+          "controlled_perception": 0.6458
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5193,
+          "patience_level": 0.6418,
+          "analytical_thinking": 0.7103,
+          "controlled_perception": 0.6547
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.49356886047463955,
+          "patience_level": 0.606449308428111,
+          "analytical_thinking": 0.593766683470762,
+          "controlled_perception": 0.6227971767901922
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6315,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0136,
+            "patience_level": 0.0091,
+            "analytical_thinking": 0.0068,
+            "controlled_perception": 0.0091
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +0.08%, drawdown -4.92%, volatility score 0.30). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.01860000000000006
+      },
+      {
+        "date": "2023-05-01",
+        "month_index": 16,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 6.2527,
+        "market_drawdown_pct": -0.5695,
+        "market_volatility_score": 0.1816,
+        "life_event": "job_uncertainty",
+        "life_event_description": "job or income uncertainty",
+        "theta_prior": {
+          "risk_sensitivity": 0.5193,
+          "patience_level": 0.6418,
+          "analytical_thinking": 0.7103,
+          "controlled_perception": 0.6547
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5341,
+          "patience_level": 0.6373,
+          "analytical_thinking": 0.7148,
+          "controlled_perception": 0.6567
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4939664620715965,
+          "patience_level": 0.6067355298597448,
+          "analytical_thinking": 0.5946387795337993,
+          "controlled_perception": 0.6236224761921574
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6357,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0234,
+            "patience_level": 0.016,
+            "analytical_thinking": 0.0041,
+            "controlled_perception": 0.0146
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.042,
+            "patience_level": -0.028,
+            "analytical_thinking": -0.007,
+            "controlled_perception": -0.042
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +6.25%, drawdown -0.57%, volatility score 0.18). Life context: job_uncertainty. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.014399999999999968
+      },
+      {
+        "date": "2023-06-01",
+        "month_index": 17,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.6862,
+        "market_drawdown_pct": -0.6704,
+        "market_volatility_score": 0.1964,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5341,
+          "patience_level": 0.6373,
+          "analytical_thinking": 0.7148,
+          "controlled_perception": 0.6567
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4908,
+          "patience_level": 0.6444,
+          "analytical_thinking": 0.6986,
+          "controlled_perception": 0.6852
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4921492119646011,
+          "patience_level": 0.6076656217296559,
+          "analytical_thinking": 0.5960758899300289,
+          "controlled_perception": 0.6259753311841416
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6298,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0177,
+            "patience_level": 0.012,
+            "analytical_thinking": 0.0044,
+            "controlled_perception": 0.0114
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.69%, drawdown -0.67%, volatility score 0.20). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.020299999999999985
+      },
+      {
+        "date": "2023-07-01",
+        "month_index": 18,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 3.4125,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.1831,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.4908,
+          "patience_level": 0.6444,
+          "analytical_thinking": 0.6986,
+          "controlled_perception": 0.6852
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5356,
+          "patience_level": 0.6147,
+          "analytical_thinking": 0.6686,
+          "controlled_perception": 0.6643
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.492585479567733,
+          "patience_level": 0.6068665485596364,
+          "analytical_thinking": 0.5955820459315514,
+          "controlled_perception": 0.6269198930584043
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6208,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0189,
+            "patience_level": 0.0128,
+            "analytical_thinking": 0.0041,
+            "controlled_perception": 0.0121
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.056,
+            "patience_level": -0.042,
+            "analytical_thinking": -0.021,
+            "controlled_perception": -0.056
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +3.41%, drawdown +0.00%, volatility score 0.18). Life context: health_stress. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.029299999999999993
+      },
+      {
+        "date": "2023-08-01",
+        "month_index": 19,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.3222,
+        "market_drawdown_pct": -1.0387,
+        "market_volatility_score": 0.1764,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5356,
+          "patience_level": 0.6147,
+          "analytical_thinking": 0.6686,
+          "controlled_perception": 0.6643
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4964,
+          "patience_level": 0.6479,
+          "analytical_thinking": 0.6726,
+          "controlled_perception": 0.7009
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4910589594682172,
+          "patience_level": 0.6078302082643854,
+          "analytical_thinking": 0.5961908031516772,
+          "controlled_perception": 0.629616273540298
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6294,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0171,
+            "patience_level": 0.0116,
+            "analytical_thinking": 0.004,
+            "controlled_perception": 0.0111
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.32%, drawdown -1.04%, volatility score 0.18). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.02070000000000005
+      },
+      {
+        "date": "2023-09-01",
+        "month_index": 20,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.3859,
+        "market_drawdown_pct": -2.3871,
+        "market_volatility_score": 0.1563,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.4964,
+          "patience_level": 0.6479,
+          "analytical_thinking": 0.6726,
+          "controlled_perception": 0.7009
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.576,
+          "patience_level": 0.5923,
+          "analytical_thinking": 0.6328,
+          "controlled_perception": 0.6405
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.49331921360409553,
+          "patience_level": 0.6058715387980862,
+          "analytical_thinking": 0.5939743930797107,
+          "controlled_perception": 0.6290991070524539
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6104,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0113,
+            "patience_level": -0.0073,
+            "analytical_thinking": 0.0034,
+            "controlled_perception": -0.0097
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.056,
+            "patience_level": -0.042,
+            "analytical_thinking": -0.021,
+            "controlled_perception": -0.056
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.39%, drawdown -2.39%, volatility score 0.16). Life context: health_stress. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.03969999999999996
+      },
+      {
+        "date": "2023-10-01",
+        "month_index": 21,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 1.5032,
+        "market_drawdown_pct": -2.6149,
+        "market_volatility_score": 0.2128,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.576,
+          "patience_level": 0.5923,
+          "analytical_thinking": 0.6328,
+          "controlled_perception": 0.6405
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5181,
+          "patience_level": 0.6531,
+          "analytical_thinking": 0.6566,
+          "controlled_perception": 0.685
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4928187977896933,
+          "patience_level": 0.6068735344986005,
+          "analytical_thinking": 0.5937691253882128,
+          "controlled_perception": 0.6307540707817312
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6282,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0159,
+            "patience_level": 0.0107,
+            "analytical_thinking": 0.0048,
+            "controlled_perception": 0.0103
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +1.50%, drawdown -2.61%, volatility score 0.21). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.02190000000000003
+      },
+      {
+        "date": "2023-11-01",
+        "month_index": 22,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.1188,
+        "market_drawdown_pct": -5.6522,
+        "market_volatility_score": 0.2392,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5181,
+          "patience_level": 0.6531,
+          "analytical_thinking": 0.6566,
+          "controlled_perception": 0.685
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5174,
+          "patience_level": 0.6556,
+          "analytical_thinking": 0.6692,
+          "controlled_perception": 0.6609
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.49252031201698315,
+          "patience_level": 0.6079002895428112,
+          "analytical_thinking": 0.5937673616294898,
+          "controlled_perception": 0.6313092685339119
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6258,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0202,
+            "patience_level": -0.0127,
+            "analytical_thinking": 0.0047,
+            "controlled_perception": -0.016
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.12%, drawdown -5.65%, volatility score 0.24). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.02429999999999999
+      },
+      {
+        "date": "2023-12-01",
+        "month_index": 23,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 6.0527,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.1721,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5174,
+          "patience_level": 0.6556,
+          "analytical_thinking": 0.6692,
+          "controlled_perception": 0.6609
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4637,
+          "patience_level": 0.6782,
+          "analytical_thinking": 0.6743,
+          "controlled_perception": 0.6981
+        },
+        "theta_inferred": {
+          "risk_sensitivity": 0.4900198842575986,
+          "patience_level": 0.6100453332700413,
+          "analytical_thinking": 0.5949801571463292,
+          "controlled_perception": 0.633524159350347
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5123,
+          "patience_level": 0.6983,
+          "analytical_thinking": 0.6724,
+          "controlled_perception": 0.7174
+        },
+        "theta_true_scalar": 0.6286,
+        "theta_static_scalar": 0.6501,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.023,
+            "patience_level": 0.0158,
+            "analytical_thinking": 0.0039,
+            "controlled_perception": 0.0144
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +6.05%, drawdown +0.00%, volatility score 0.17). Life context: none. I can tolerate some risk. I can stay patient for the long term. I am relying on structured analysis. I feel in control of my plan.",
+        "scalar_absolute_error": 0.021499999999999964
+      }
+    ],
+    "dimension_error_series": {
+      "risk_sensitivity": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.044899999999999995
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.04019999999999996
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.01319999999999999
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.0635
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.018100000000000005
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.01739999999999997
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.07750000000000001
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.0373
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.06569999999999998
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.06279999999999997
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.009099999999999997
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.02679999999999999
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.0016000000000000458
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.06530000000000002
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.05790000000000006
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.007000000000000006
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.02180000000000004
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.021499999999999964
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.023299999999999987
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.01589999999999997
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.06369999999999998
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.005800000000000027
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.005099999999999993
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.04859999999999998
+        }
+      ],
+      "patience_level": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.011800000000000033
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.020500000000000074
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.04830000000000001
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.03639999999999999
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.03970000000000007
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.06730000000000003
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.09010000000000007
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.02980000000000005
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.04749999999999999
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.04949999999999999
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.031500000000000083
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.03090000000000004
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.012800000000000034
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.04610000000000003
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.06620000000000004
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.056499999999999995
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.061000000000000054
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.05390000000000006
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.08360000000000001
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.0504
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.10599999999999998
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.04520000000000002
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.04270000000000007
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.020100000000000007
+        }
+      ],
+      "analytical_thinking": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.010199999999999987
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.010700000000000043
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.04359999999999997
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.0514
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.0726
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.08699999999999997
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.0776
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.08460000000000001
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.03720000000000001
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.035800000000000054
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.033499999999999974
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.02959999999999996
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.03739999999999999
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.0050000000000000044
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.019000000000000017
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.037900000000000045
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.04239999999999999
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.0262
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.0038000000000000256
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.00019999999999997797
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.03959999999999997
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.015800000000000036
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.0031999999999999806
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.0019000000000000128
+        }
+      ],
+      "controlled_perception": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.033299999999999996
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.045599999999999974
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.007199999999999984
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.00990000000000002
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.029200000000000004
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.05460000000000009
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.12250000000000005
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.06420000000000003
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.09100000000000008
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.10450000000000004
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.07040000000000002
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.02290000000000003
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.047700000000000076
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.09610000000000007
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.0716
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.06270000000000009
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.06070000000000009
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.032200000000000006
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.053100000000000036
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.01650000000000007
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.07690000000000008
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.032399999999999984
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.056499999999999995
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.019299999999999984
+        }
+      ]
+    },
+    "scalar_error_series": [
+      {
+        "date": "2022-01-01",
+        "month_offset": 0.0,
+        "absolute_error": 0.008399999999999963
+      },
+      {
+        "date": "2022-02-01",
+        "month_offset": 1.0184804928131417,
+        "absolute_error": 0.0010999999999999899
+      },
+      {
+        "date": "2022-03-01",
+        "month_offset": 1.9383983572895278,
+        "absolute_error": 0.006299999999999972
+      },
+      {
+        "date": "2022-04-01",
+        "month_offset": 2.9568788501026693,
+        "absolute_error": 0.014600000000000057
+      },
+      {
+        "date": "2022-05-01",
+        "month_offset": 3.9425051334702257,
+        "absolute_error": 0.0036000000000000476
+      },
+      {
+        "date": "2022-06-01",
+        "month_offset": 4.960985626283367,
+        "absolute_error": 0.0043999999999999595
+      },
+      {
+        "date": "2022-07-01",
+        "month_offset": 5.946611909650924,
+        "absolute_error": 0.014399999999999968
+      },
+      {
+        "date": "2022-08-01",
+        "month_offset": 6.965092402464066,
+        "absolute_error": 0.007000000000000006
+      },
+      {
+        "date": "2022-09-01",
+        "month_offset": 7.983572895277208,
+        "absolute_error": 0.008900000000000019
+      },
+      {
+        "date": "2022-10-01",
+        "month_offset": 8.969199178644764,
+        "absolute_error": 0.013900000000000023
+      },
+      {
+        "date": "2022-11-01",
+        "month_offset": 9.987679671457906,
+        "absolute_error": 0.014800000000000035
+      },
+      {
+        "date": "2022-12-01",
+        "month_offset": 10.973305954825461,
+        "absolute_error": 0.012800000000000034
+      },
+      {
+        "date": "2023-01-01",
+        "month_offset": 11.991786447638603,
+        "absolute_error": 0.00539999999999996
+      },
+      {
+        "date": "2023-02-01",
+        "month_offset": 13.010266940451745,
+        "absolute_error": 0.018000000000000016
+      },
+      {
+        "date": "2023-03-01",
+        "month_offset": 13.930184804928132,
+        "absolute_error": 0.015199999999999991
+      },
+      {
+        "date": "2023-04-01",
+        "month_offset": 14.948665297741274,
+        "absolute_error": 0.01860000000000006
+      },
+      {
+        "date": "2023-05-01",
+        "month_offset": 15.93429158110883,
+        "absolute_error": 0.014399999999999968
+      },
+      {
+        "date": "2023-06-01",
+        "month_offset": 16.95277207392197,
+        "absolute_error": 0.020299999999999985
+      },
+      {
+        "date": "2023-07-01",
+        "month_offset": 17.93839835728953,
+        "absolute_error": 0.029299999999999993
+      },
+      {
+        "date": "2023-08-01",
+        "month_offset": 18.95687885010267,
+        "absolute_error": 0.02070000000000005
+      },
+      {
+        "date": "2023-09-01",
+        "month_offset": 19.975359342915812,
+        "absolute_error": 0.03969999999999996
+      },
+      {
+        "date": "2023-10-01",
+        "month_offset": 20.960985626283367,
+        "absolute_error": 0.02190000000000003
+      },
+      {
+        "date": "2023-11-01",
+        "month_offset": 21.97946611909651,
+        "absolute_error": 0.02429999999999999
+      },
+      {
+        "date": "2023-12-01",
+        "month_offset": 22.965092402464066,
+        "absolute_error": 0.021499999999999964
+      }
+    ],
+    "static_misalignment": {
+      "baseline_name": "self_reported_static_theta",
+      "material_threshold_rmse": 0.15,
+      "num_events": 24,
+      "initial_rmse": 0.029018011647940316,
+      "final_rmse": 0.028027085114224762,
+      "average_rmse": 0.04706461336330081,
+      "max_rmse": 0.09374469318313441,
+      "rmse_growth": -0.000990926533715554,
+      "material_misalignment_rate": 0.0,
+      "first_material_misalignment_date": null,
+      "drift_slope_rmse_per_month": -0.0003303329825692654,
+      "error_series": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.10020000000000001,
+          "squared_error": 0.0033681799999999997,
+          "mae": 0.025050000000000003,
+          "rmse": 0.029018011647940316
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.11700000000000005,
+          "squared_error": 0.004230139999999998,
+          "mae": 0.029250000000000012,
+          "rmse": 0.03251976322177023
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.11229999999999996,
+          "squared_error": 0.004459929999999998,
+          "mae": 0.02807499999999999,
+          "rmse": 0.03339135367127244
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.1612,
+          "squared_error": 0.00809718,
+          "mae": 0.0403,
+          "rmse": 0.04499216598475784
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.15960000000000008,
+          "squared_error": 0.008027100000000006,
+          "mae": 0.03990000000000002,
+          "rmse": 0.044797042313081355
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.22630000000000006,
+          "squared_error": 0.015382210000000007,
+          "mae": 0.056575000000000014,
+          "rmse": 0.062012518897396854
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.36770000000000014,
+          "squared_error": 0.03515227000000003,
+          "mae": 0.09192500000000003,
+          "rmse": 0.09374469318313441
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.2159000000000001,
+          "squared_error": 0.013558130000000009,
+          "mae": 0.05397500000000002,
+          "rmse": 0.05821969168588925
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.24140000000000006,
+          "squared_error": 0.016237580000000012,
+          "mae": 0.060350000000000015,
+          "rmse": 0.06371338163996636
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.25260000000000005,
+          "squared_error": 0.01859598000000001,
+          "mae": 0.06315000000000001,
+          "rmse": 0.06818353906919178
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.14450000000000007,
+          "squared_error": 0.007153470000000006,
+          "mae": 0.03612500000000002,
+          "rmse": 0.042289094338848185
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.11020000000000002,
+          "squared_error": 0.003073620000000001,
+          "mae": 0.027550000000000005,
+          "rmse": 0.02772011904736342
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.09950000000000014,
+          "squared_error": 0.0038404500000000074,
+          "mae": 0.024875000000000036,
+          "rmse": 0.030985682177418684
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.21250000000000013,
+          "squared_error": 0.01564951000000002,
+          "mae": 0.05312500000000003,
+          "rmse": 0.0625490007913796
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.2147000000000001,
+          "squared_error": 0.013222410000000013,
+          "mae": 0.05367500000000003,
+          "rmse": 0.05749436928952263
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.16410000000000013,
+          "squared_error": 0.008608950000000015,
+          "mae": 0.041025000000000034,
+          "rmse": 0.04639221378636725
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.18590000000000018,
+          "squared_error": 0.009678490000000019,
+          "mae": 0.046475000000000044,
+          "rmse": 0.04918965846598251
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.13380000000000003,
+          "squared_error": 0.005090740000000005,
+          "mae": 0.03345000000000001,
+          "rmse": 0.0356747109308541
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.16380000000000006,
+          "squared_error": 0.010365900000000004,
+          "mae": 0.040950000000000014,
+          "rmse": 0.050906531997377324
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.08300000000000002,
+          "squared_error": 0.0030652600000000015,
+          "mae": 0.020750000000000005,
+          "rmse": 0.02768239512758967
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.2862,
+          "squared_error": 0.022775460000000004,
+          "mae": 0.07155,
+          "rmse": 0.07545770338408134
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.09920000000000007,
+          "squared_error": 0.0033760800000000022,
+          "mae": 0.024800000000000016,
+          "rmse": 0.029052022304824163
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.10750000000000004,
+          "squared_error": 0.005051790000000005,
+          "mae": 0.02687500000000001,
+          "rmse": 0.035537972648984936
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.08989999999999998,
+          "squared_error": 0.0031420699999999972,
+          "mae": 0.022474999999999995,
+          "rmse": 0.028027085114224762
+        }
+      ],
+      "error_growth_rate": {
+        "slope_per_month": -4.314925088693444e-05,
+        "start_error": 0.029018011647940316,
+        "end_error": 0.028027085114224762,
+        "start_month": 0.0,
+        "end_month": 22.965092402464066
+      },
+      "window_growth_comparison": {
+        "early_window_growth": {
+          "slope_per_month": 0.010884631874184918,
+          "start_error": 0.029018011647940316,
+          "end_error": 0.09374469318313441,
+          "start_month": 0.0,
+          "end_month": 5.946611909650924
+        },
+        "late_window_growth": {
+          "slope_per_month": -0.004551589310496446,
+          "start_error": 0.050906531997377324,
+          "end_error": 0.028027085114224762,
+          "start_month": 17.93839835728953,
+          "end_month": 22.965092402464066
+        },
+        "growth_ratio_late_vs_early": -0.41816658230688086
+      }
+    },
+    "static_vs_dynamic": {
+      "static_overall_rmse": 0.050125145469448115,
+      "dynamic_overall_rmse": 0.08237886731612325,
+      "improvement_pct": -64.34639050840096,
+      "dimension_static_rmse": {
+        "risk_sensitivity": 0.04123529030656467,
+        "patience_level": 0.05303604906099249,
+        "analytical_thinking": 0.04232587860871881,
+        "controlled_perception": 0.06120023828929648
+      },
+      "dimension_dynamic_rmse": {
+        "risk_sensitivity": 0.05256763507798751,
+        "patience_level": 0.0658025539796626,
+        "analytical_thinking": 0.12072807792079056,
+        "controlled_perception": 0.07400344556007109
+      }
+    },
+    "hypothesis_supported": false
+  }
+}
