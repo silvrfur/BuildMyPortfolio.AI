@@ -7,7 +7,7 @@ import os
 from sqlalchemy import create_engine, event
 from sqlalchemy.orm import sessionmaker, Session
 from contextlib import contextmanager
-from models import Base
+from .models import Base
 
 # ── CONFIG ────────────────────────────────────────────────────────────────────
 # SQLite for local dev. Switch to Postgres with:

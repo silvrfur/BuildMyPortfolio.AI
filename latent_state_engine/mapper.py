@@ -12,6 +12,14 @@ def clamp(value: float, min_val: float = 0.0, max_val: float = 1.0) -> float:
     return max(min_val, min(max_val, value))
 
 
+def sharpen(value: float, factor: float = 1.35) -> float:
+    """
+    Push moderate evidence away from 0.5 so distinct language produces
+    clearer latent separation before the Bayesian update.
+    """
+    return clamp(0.5 + factor * (value - 0.5))
+
+
 def normalize_time_bias(time_horizon_bias: float) -> float:
     """
     Converts [-1, 1] -> [0, 1].
@@ -22,41 +30,46 @@ def normalize_time_bias(time_horizon_bias: float) -> float:
 
 def compute_risk_sensitivity(signal: NLPSignals) -> float:
     risk = (
-        0.40 * signal.fear_sentiment
-        + 0.25 * signal.uncertainty_score
-        + 0.20 * signal.risk_language_density
-        + 0.15 * signal.herding_marker
+        0.38 * signal.fear_sentiment
+        + 0.14 * signal.uncertainty_score
+        + 0.30 * signal.risk_language_density
+        + 0.08 * signal.herding_marker
+        + 0.10 * signal.urgency_score
     )
-    return clamp(risk)
+    return sharpen(risk, factor=1.45)
 
 
 def compute_patience_level(signal: NLPSignals) -> float:
     long_term_orientation = normalize_time_bias(signal.time_horizon_bias)
 
     patience = (
-        0.50 * long_term_orientation
-        + 0.35 * (1.0 - signal.urgency_score)
-        + 0.15 * (1.0 - signal.fear_sentiment)
+        0.58 * long_term_orientation
+        + 0.28 * (1.0 - signal.urgency_score)
+        + 0.08 * (1.0 - signal.fear_sentiment)
+        + 0.06 * signal.internal_locus_score
     )
-    return clamp(patience)
+    return sharpen(patience, factor=1.35)
 
 
 def compute_analytical_thinking(signal: NLPSignals) -> float:
     analytical = (
-        0.50 * signal.analytical_marker
-        + 0.25 * (1.0 - signal.fear_sentiment)
-        + 0.25 * (1.0 - signal.uncertainty_score)
+        0.72 * signal.analytical_marker
+        + 0.08 * (1.0 - signal.fear_sentiment)
+        + 0.12 * (1.0 - signal.uncertainty_score)
+        + 0.08 * (1.0 - signal.herding_marker)
     )
-    return clamp(analytical)
+    return sharpen(analytical, factor=1.40)
 
 
 def compute_controlled_perception(signal: NLPSignals) -> float:
     control = (
         0.50 * signal.internal_locus_score
-        + 0.30 * (1.0 - signal.external_locus_score)
-        + 0.20 * (1.0 - signal.herding_marker)
+        + 0.28 * (1.0 - signal.external_locus_score)
+        + 0.08 * (1.0 - signal.herding_marker)
+        + 0.08 * (1.0 - signal.uncertainty_score)
+        + 0.06 * (1.0 - signal.fear_sentiment)
     )
-    return clamp(control)
+    return sharpen(control, factor=1.45)
 
 
 def map_signals_to_latent(signal: NLPSignals | Mapping[str, float]) -> LatentStateSchema:

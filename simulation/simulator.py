@@ -9,7 +9,7 @@ Uses historical prices from yfinance — no live prices, no look-ahead bias.
 Each user gets an isolated SQLite DB (sim_{email}.db) — no production DB pollution.
 
 Usage:
-    from simulator import run_simulation, run_all_simulations
+    from simulation.simulator import run_simulation, run_all_simulations
     result = run_simulation(scenario)        # one user
     results = run_all_simulations()          # all 5 users
 """
@@ -18,14 +18,18 @@ import os
 import math
 import copy
 import json
+import sys
 import numpy as np
 import pandas as pd
 import yfinance as yf
 from datetime import datetime, date
 from typing import Optional
 
-from simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
-from assets import assets, asset_classes, constraints_data
+from portfolio_optimizer.assets import assets, asset_classes, constraints_data
+from portfolio_optimizer.simulation_scenarios import SCENARIOS, SIMULATION_END_DATE
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 # ── We import riskfolio / portfolio machinery lazily inside functions
 # to allow the simulator to be imported without triggering DB init etc.
@@ -115,7 +119,7 @@ def run_optimizer_historical(config: dict, end_date: str,
     end_str   = str(slice_df.index[-1].date())
 
     try:
-        from riskfolio_main import run_portfolio
+        from portfolio_optimizer.riskfolio_main import run_portfolio
         result = run_portfolio(
             config         = config,
             start          = start_str,

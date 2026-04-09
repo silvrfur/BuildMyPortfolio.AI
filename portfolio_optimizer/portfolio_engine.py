@@ -14,8 +14,8 @@ from datetime import date, datetime
 from typing import Optional
 import yfinance as yf
 
-from database import get_db
-from models import User, Portfolio, OptimizerRun, Position, Trade, RebalanceEvent
+from .database import get_db
+from .models import User, Portfolio, OptimizerRun, Position, Trade, RebalanceEvent
 
 
 # ─────────────────────────────────────────────────────────────────────────────

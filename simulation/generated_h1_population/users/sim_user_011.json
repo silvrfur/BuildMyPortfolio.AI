@@ -1,0 +1,2042 @@
+{
+  "user_profile": {
+    "user_id": "sim_user_011",
+    "email": "sim_user_011@example.com",
+    "name": "Simulated User 011",
+    "capital": 100000.0,
+    "archetype": "analytical_but_stressed",
+    "baseline_true_theta": {
+      "risk_sensitivity": 0.591,
+      "patience_level": 0.4373,
+      "analytical_thinking": 0.8152,
+      "controlled_perception": 0.5316
+    },
+    "static_theta": {
+      "risk_sensitivity": 0.5585,
+      "patience_level": 0.4037,
+      "analytical_thinking": 0.8381,
+      "controlled_perception": 0.5274
+    },
+    "static_theta_scalar": 0.5819,
+    "market_sensitivity": 0.5824,
+    "life_event_sensitivity": 0.6325,
+    "recovery_bias": 0.1296
+  },
+  "simulation_result": {
+    "user_id": "sim_user_011",
+    "email": "sim_user_011@example.com",
+    "name": "Simulated User 011",
+    "archetype": "analytical_but_stressed",
+    "baseline_true_theta": {
+      "risk_sensitivity": 0.591,
+      "patience_level": 0.4373,
+      "analytical_thinking": 0.8152,
+      "controlled_perception": 0.5316
+    },
+    "static_theta": {
+      "risk_sensitivity": 0.5585,
+      "patience_level": 0.4037,
+      "analytical_thinking": 0.8381,
+      "controlled_perception": 0.5274
+    },
+    "static_profile_origin": "self_reported_onboarding_preference",
+    "events": [
+      {
+        "date": "2022-01-01",
+        "month_index": 0,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.1064,
+        "market_drawdown_pct": -5.5905,
+        "market_volatility_score": 0.3866,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.591,
+          "patience_level": 0.4373,
+          "analytical_thinking": 0.8152,
+          "controlled_perception": 0.5316
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6281,
+          "patience_level": 0.41,
+          "analytical_thinking": 0.8001,
+          "controlled_perception": 0.4781
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5791,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0349,
+            "patience_level": -0.0226,
+            "analytical_thinking": 0.0112,
+            "controlled_perception": -0.0309
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.11%, drawdown -5.59%, volatility score 0.39). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.0028000000000000247
+      },
+      {
+        "date": "2022-02-01",
+        "month_index": 1,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 1.0171,
+        "market_drawdown_pct": -4.2064,
+        "market_volatility_score": 0.3922,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6281,
+          "patience_level": 0.41,
+          "analytical_thinking": 0.8001,
+          "controlled_perception": 0.4781
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.578,
+          "patience_level": 0.4595,
+          "analytical_thinking": 0.7987,
+          "controlled_perception": 0.5189
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5888,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0196,
+            "patience_level": 0.0131,
+            "analytical_thinking": 0.0114,
+            "controlled_perception": 0.0128
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +1.02%, drawdown -4.21%, volatility score 0.39). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I can stay patient for months if the thesis still makes sense. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.006900000000000017
+      },
+      {
+        "date": "2022-03-01",
+        "month_index": 2,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -1.7612,
+        "market_drawdown_pct": -8.1755,
+        "market_volatility_score": 0.5703,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.578,
+          "patience_level": 0.4595,
+          "analytical_thinking": 0.7987,
+          "controlled_perception": 0.5189
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6132,
+          "patience_level": 0.4368,
+          "analytical_thinking": 0.8329,
+          "controlled_perception": 0.4381
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5802,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0531,
+            "patience_level": -0.0347,
+            "analytical_thinking": 0.0161,
+            "controlled_perception": -0.0455
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -1.76%, drawdown -8.18%, volatility score 0.57). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.0016999999999999238
+      },
+      {
+        "date": "2022-04-01",
+        "month_index": 3,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 5.7579,
+        "market_drawdown_pct": -3.8176,
+        "market_volatility_score": 0.4392,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6132,
+          "patience_level": 0.4368,
+          "analytical_thinking": 0.8329,
+          "controlled_perception": 0.4381
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5479,
+          "patience_level": 0.4421,
+          "analytical_thinking": 0.8776,
+          "controlled_perception": 0.4841
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5879,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0292,
+            "patience_level": 0.02,
+            "analytical_thinking": 0.0128,
+            "controlled_perception": 0.0183
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +5.76%, drawdown -3.82%, volatility score 0.44). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.006000000000000005
+      },
+      {
+        "date": "2022-05-01",
+        "month_index": 4,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.9561,
+        "market_drawdown_pct": -5.0003,
+        "market_volatility_score": 0.426,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.5479,
+          "patience_level": 0.4421,
+          "analytical_thinking": 0.8776,
+          "controlled_perception": 0.4841
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6973,
+          "patience_level": 0.3108,
+          "analytical_thinking": 0.8736,
+          "controlled_perception": 0.3154
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5493,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0387,
+            "patience_level": -0.0256,
+            "analytical_thinking": 0.0121,
+            "controlled_perception": -0.0333
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.1012,
+            "patience_level": -0.0759,
+            "analytical_thinking": -0.0379,
+            "controlled_perception": -0.1012
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.96%, drawdown -5.00%, volatility score 0.43). Life context: health_stress. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.03259999999999996
+      },
+      {
+        "date": "2022-06-01",
+        "month_index": 5,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -2.9873,
+        "market_drawdown_pct": -7.9922,
+        "market_volatility_score": 0.5232,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6973,
+          "patience_level": 0.3108,
+          "analytical_thinking": 0.8736,
+          "controlled_perception": 0.3154
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.7315,
+          "patience_level": 0.3152,
+          "analytical_thinking": 0.885,
+          "controlled_perception": 0.3036
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5588,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0504,
+            "patience_level": -0.0329,
+            "analytical_thinking": 0.0144,
+            "controlled_perception": -0.0422
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -2.99%, drawdown -7.99%, volatility score 0.52). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I feel unsure and hesitant about what to do next. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.02310000000000001
+      },
+      {
+        "date": "2022-07-01",
+        "month_index": 6,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -5.0033,
+        "market_drawdown_pct": -12.0652,
+        "market_volatility_score": 0.4038,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.7315,
+          "patience_level": 0.3152,
+          "analytical_thinking": 0.885,
+          "controlled_perception": 0.3036
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.7872,
+          "patience_level": 0.3088,
+          "analytical_thinking": 0.8577,
+          "controlled_perception": 0.2959
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5624,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0452,
+            "patience_level": -0.0276,
+            "analytical_thinking": 0.0103,
+            "controlled_perception": -0.0366
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -5.00%, drawdown -12.07%, volatility score 0.40). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I feel unsure and hesitant about what to do next. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.019499999999999962
+      },
+      {
+        "date": "2022-08-01",
+        "month_index": 7,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 9.8986,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.2717,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.7872,
+          "patience_level": 0.3088,
+          "analytical_thinking": 0.8577,
+          "controlled_perception": 0.2959
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6929,
+          "patience_level": 0.3635,
+          "analytical_thinking": 0.8915,
+          "controlled_perception": 0.3667
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5786,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0376,
+            "patience_level": 0.026,
+            "analytical_thinking": 0.0079,
+            "controlled_perception": 0.0232
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +9.90%, drawdown +0.00%, volatility score 0.27). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.0032999999999999696
+      },
+      {
+        "date": "2022-09-01",
+        "month_index": 8,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.8305,
+        "market_drawdown_pct": -1.9876,
+        "market_volatility_score": 0.3385,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6929,
+          "patience_level": 0.3635,
+          "analytical_thinking": 0.8915,
+          "controlled_perception": 0.3667
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6524,
+          "patience_level": 0.3933,
+          "analytical_thinking": 0.8917,
+          "controlled_perception": 0.4226
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.59,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0232,
+            "patience_level": 0.0158,
+            "analytical_thinking": 0.0098,
+            "controlled_perception": 0.015
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.83%, drawdown -1.99%, volatility score 0.34). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.008099999999999996
+      },
+      {
+        "date": "2022-10-01",
+        "month_index": 9,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -2.6014,
+        "market_drawdown_pct": -5.1384,
+        "market_volatility_score": 0.3492,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6524,
+          "patience_level": 0.3933,
+          "analytical_thinking": 0.8917,
+          "controlled_perception": 0.4226
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6581,
+          "patience_level": 0.3424,
+          "analytical_thinking": 0.8592,
+          "controlled_perception": 0.3827
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5606,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0342,
+            "patience_level": -0.0225,
+            "analytical_thinking": 0.0094,
+            "controlled_perception": -0.028
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -2.60%, drawdown -5.14%, volatility score 0.35). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.021299999999999986
+      },
+      {
+        "date": "2022-11-01",
+        "month_index": 10,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 7.5569,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.3375,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.6581,
+          "patience_level": 0.3424,
+          "analytical_thinking": 0.8592,
+          "controlled_perception": 0.3827
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.7105,
+          "patience_level": 0.3267,
+          "analytical_thinking": 0.8047,
+          "controlled_perception": 0.2918
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5334,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0328,
+            "patience_level": 0.0227,
+            "analytical_thinking": 0.0098,
+            "controlled_perception": 0.0204
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.1012,
+            "patience_level": -0.0759,
+            "analytical_thinking": -0.0379,
+            "controlled_perception": -0.1012
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +7.56%, drawdown +0.00%, volatility score 0.34). Life context: health_stress. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I feel unsure and hesitant about what to do next. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.04849999999999999
+      },
+      {
+        "date": "2022-12-01",
+        "month_index": 11,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 3.8186,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.2124,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.7105,
+          "patience_level": 0.3267,
+          "analytical_thinking": 0.8047,
+          "controlled_perception": 0.2918
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6609,
+          "patience_level": 0.3802,
+          "analytical_thinking": 0.8084,
+          "controlled_perception": 0.3245
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5435,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0253,
+            "patience_level": 0.0172,
+            "analytical_thinking": 0.0062,
+            "controlled_perception": 0.0161
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +3.82%, drawdown +0.00%, volatility score 0.21). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.03839999999999999
+      },
+      {
+        "date": "2023-01-01",
+        "month_index": 12,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.6489,
+        "market_drawdown_pct": -3.6489,
+        "market_volatility_score": 0.2635,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6609,
+          "patience_level": 0.3802,
+          "analytical_thinking": 0.8084,
+          "controlled_perception": 0.3245
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6692,
+          "patience_level": 0.3929,
+          "analytical_thinking": 0.8413,
+          "controlled_perception": 0.3328
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5591,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0274,
+            "patience_level": -0.0183,
+            "analytical_thinking": 0.0066,
+            "controlled_perception": -0.021
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.65%, drawdown -3.65%, volatility score 0.26). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.02279999999999993
+      },
+      {
+        "date": "2023-02-01",
+        "month_index": 13,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.1153,
+        "market_drawdown_pct": -6.0377,
+        "market_volatility_score": 0.2699,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6692,
+          "patience_level": 0.3929,
+          "analytical_thinking": 0.8413,
+          "controlled_perception": 0.3328
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6565,
+          "patience_level": 0.3825,
+          "analytical_thinking": 0.8201,
+          "controlled_perception": 0.3101
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5423,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0288,
+            "patience_level": -0.0183,
+            "analytical_thinking": 0.0069,
+            "controlled_perception": -0.0231
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.12%, drawdown -6.04%, volatility score 0.27). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.03959999999999997
+      },
+      {
+        "date": "2023-03-01",
+        "month_index": 14,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -1.1166,
+        "market_drawdown_pct": -6.6061,
+        "market_volatility_score": 0.2269,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6565,
+          "patience_level": 0.3825,
+          "analytical_thinking": 0.8201,
+          "controlled_perception": 0.3101
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6403,
+          "patience_level": 0.3407,
+          "analytical_thinking": 0.8449,
+          "controlled_perception": 0.2861
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.528,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0235,
+            "patience_level": -0.0141,
+            "analytical_thinking": 0.0063,
+            "controlled_perception": -0.0205
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -1.12%, drawdown -6.61%, volatility score 0.23). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.05389999999999995
+      },
+      {
+        "date": "2023-04-01",
+        "month_index": 15,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 0.0843,
+        "market_drawdown_pct": -4.9179,
+        "market_volatility_score": 0.3031,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6403,
+          "patience_level": 0.3407,
+          "analytical_thinking": 0.8449,
+          "controlled_perception": 0.2861
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6262,
+          "patience_level": 0.3813,
+          "analytical_thinking": 0.8408,
+          "controlled_perception": 0.3143
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5406,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0176,
+            "patience_level": 0.0118,
+            "analytical_thinking": 0.0089,
+            "controlled_perception": 0.0118
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +0.08%, drawdown -4.92%, volatility score 0.30). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.0413
+      },
+      {
+        "date": "2023-05-01",
+        "month_index": 16,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 6.2527,
+        "market_drawdown_pct": -0.5695,
+        "market_volatility_score": 0.1816,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6262,
+          "patience_level": 0.3813,
+          "analytical_thinking": 0.8408,
+          "controlled_perception": 0.3143
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.587,
+          "patience_level": 0.4143,
+          "analytical_thinking": 0.8246,
+          "controlled_perception": 0.3979
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5559,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0302,
+            "patience_level": 0.0207,
+            "analytical_thinking": 0.0053,
+            "controlled_perception": 0.0189
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +6.25%, drawdown -0.57%, volatility score 0.18). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.026000000000000023
+      },
+      {
+        "date": "2023-06-01",
+        "month_index": 17,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.6862,
+        "market_drawdown_pct": -0.6704,
+        "market_volatility_score": 0.1964,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.587,
+          "patience_level": 0.4143,
+          "analytical_thinking": 0.8246,
+          "controlled_perception": 0.3979
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5402,
+          "patience_level": 0.4269,
+          "analytical_thinking": 0.8416,
+          "controlled_perception": 0.4438
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5631,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0229,
+            "patience_level": 0.0156,
+            "analytical_thinking": 0.0057,
+            "controlled_perception": 0.0148
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.69%, drawdown -0.67%, volatility score 0.20). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.018799999999999928
+      },
+      {
+        "date": "2023-07-01",
+        "month_index": 18,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 3.4125,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.1831,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5402,
+          "patience_level": 0.4269,
+          "analytical_thinking": 0.8416,
+          "controlled_perception": 0.4438
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.4945,
+          "patience_level": 0.4396,
+          "analytical_thinking": 0.8664,
+          "controlled_perception": 0.4767
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5693,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0244,
+            "patience_level": 0.0166,
+            "analytical_thinking": 0.0054,
+            "controlled_perception": 0.0156
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +3.41%, drawdown +0.00%, volatility score 0.18). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.012599999999999945
+      },
+      {
+        "date": "2023-08-01",
+        "month_index": 19,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 2.3222,
+        "market_drawdown_pct": -1.0387,
+        "market_volatility_score": 0.1764,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.4945,
+          "patience_level": 0.4396,
+          "analytical_thinking": 0.8664,
+          "controlled_perception": 0.4767
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5156,
+          "patience_level": 0.4567,
+          "analytical_thinking": 0.8483,
+          "controlled_perception": 0.47
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5726,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0222,
+            "patience_level": 0.015,
+            "analytical_thinking": 0.0051,
+            "controlled_perception": 0.0143
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +2.32%, drawdown -1.04%, volatility score 0.18). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I can stay patient for months if the thesis still makes sense. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.009299999999999975
+      },
+      {
+        "date": "2023-09-01",
+        "month_index": 20,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -0.3859,
+        "market_drawdown_pct": -2.3871,
+        "market_volatility_score": 0.1563,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.5156,
+          "patience_level": 0.4567,
+          "analytical_thinking": 0.8483,
+          "controlled_perception": 0.47
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.5471,
+          "patience_level": 0.4725,
+          "analytical_thinking": 0.8463,
+          "controlled_perception": 0.4646
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5826,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0146,
+            "patience_level": -0.0094,
+            "analytical_thinking": 0.0044,
+            "controlled_perception": -0.0126
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -0.39%, drawdown -2.39%, volatility score 0.16). Life context: none. I can tolerate balanced risk if the setup is sensible, but I still care about avoiding unnecessary drawdowns. I can stay patient for months if the thesis still makes sense. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I am trying to stay disciplined, follow my own plan, and stick to my process. I notice the crowd, but I still want to make my own call. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.0007000000000000339
+      },
+      {
+        "date": "2023-10-01",
+        "month_index": 21,
+        "market_regime": "volatile_bull",
+        "market_description": "real market gains with unstable swings",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 1.5032,
+        "market_drawdown_pct": -2.6149,
+        "market_volatility_score": 0.2128,
+        "life_event": "health_stress",
+        "life_event_description": "medical or health-related stress",
+        "theta_prior": {
+          "risk_sensitivity": 0.5471,
+          "patience_level": 0.4725,
+          "analytical_thinking": 0.8463,
+          "controlled_perception": 0.4646
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6483,
+          "patience_level": 0.407,
+          "analytical_thinking": 0.7735,
+          "controlled_perception": 0.3661
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5487,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0206,
+            "patience_level": 0.0139,
+            "analytical_thinking": 0.0062,
+            "controlled_perception": 0.0134
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.1012,
+            "patience_level": -0.0759,
+            "analytical_thinking": -0.0379,
+            "controlled_perception": -0.1012
+          }
+        },
+        "chat_text": "Market regime: volatile_bull. Market detail: real market gains with unstable swings (1m return +1.50%, drawdown -2.61%, volatility score 0.21). Life context: health_stress. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.03320000000000001
+      },
+      {
+        "date": "2023-11-01",
+        "month_index": 22,
+        "market_regime": "correction",
+        "market_description": "real market pullback from Yahoo Finance history",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": -3.1188,
+        "market_drawdown_pct": -5.6522,
+        "market_volatility_score": 0.2392,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6483,
+          "patience_level": 0.407,
+          "analytical_thinking": 0.7735,
+          "controlled_perception": 0.3661
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6956,
+          "patience_level": 0.3778,
+          "analytical_thinking": 0.8014,
+          "controlled_perception": 0.3486
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5558,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": 0.0261,
+            "patience_level": -0.0165,
+            "analytical_thinking": 0.0061,
+            "controlled_perception": -0.0207
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: correction. Market detail: real market pullback from Yahoo Finance history (1m return -3.12%, drawdown -5.65%, volatility score 0.24). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I feel helpless, externally driven, and out of control because the market keeps forcing my hand.",
+        "scalar_absolute_error": 0.026100000000000012
+      },
+      {
+        "date": "2023-12-01",
+        "month_index": 23,
+        "market_regime": "calm_bull",
+        "market_description": "real market advance with low realized volatility",
+        "market_ticker": "NIFTYBEES.NS",
+        "market_monthly_return_pct": 6.0527,
+        "market_drawdown_pct": 0.0,
+        "market_volatility_score": 0.1721,
+        "life_event": "none",
+        "life_event_description": "no material personal event",
+        "theta_prior": {
+          "risk_sensitivity": 0.6956,
+          "patience_level": 0.3778,
+          "analytical_thinking": 0.8014,
+          "controlled_perception": 0.3486
+        },
+        "theta_true": {
+          "risk_sensitivity": 0.6816,
+          "patience_level": 0.4216,
+          "analytical_thinking": 0.8006,
+          "controlled_perception": 0.4133
+        },
+        "theta_static": {
+          "risk_sensitivity": 0.5585,
+          "patience_level": 0.4037,
+          "analytical_thinking": 0.8381,
+          "controlled_perception": 0.5274
+        },
+        "theta_true_scalar": 0.5793,
+        "theta_static_scalar": 0.5819,
+        "driver_effects": {
+          "market_drift": {
+            "risk_sensitivity": -0.0298,
+            "patience_level": 0.0204,
+            "analytical_thinking": 0.005,
+            "controlled_perception": 0.0187
+          },
+          "life_event_drift": {
+            "risk_sensitivity": 0.0,
+            "patience_level": 0.0,
+            "analytical_thinking": 0.0,
+            "controlled_perception": 0.0
+          }
+        },
+        "chat_text": "Market regime: calm_bull. Market detail: real market advance with low realized volatility (1m return +6.05%, drawdown +0.00%, volatility score 0.17). Life context: none. I am cautious about risk, I keep thinking about downside, and I do not want large losses. I need flexibility soon and I am thinking in the near term more than in years. I am relying on research, earnings, valuation, cash-flow analysis, probability estimates, scenario analysis, and data before making the decision. I feel somewhat pushed around by events, outside forces, and market noise, and my conviction is not stable. I keep noticing what everyone else is doing and it affects my conviction. I have some uncertainty, but I can still make a decision. My decision is based on data, valuation, balance sheet quality, and structured research. I am trying to stay disciplined, but outside events still affect my actions.",
+        "scalar_absolute_error": 0.0025999999999999357
+      }
+    ],
+    "dimension_error_series": {
+      "risk_sensitivity": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.0696
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.019499999999999962
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.05469999999999997
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.010599999999999943
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.13880000000000003
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.17300000000000004
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.22870000000000001
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.13439999999999996
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.09389999999999998
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.09960000000000002
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.15200000000000002
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.10240000000000005
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.11070000000000002
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.09799999999999998
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.08179999999999998
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.06769999999999998
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.02849999999999997
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.018299999999999983
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.064
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.04290000000000005
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.011399999999999966
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.08979999999999999
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.1371
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.12309999999999999
+        }
+      ],
+      "patience_level": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.006299999999999972
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.055800000000000016
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.03310000000000002
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.03839999999999999
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.09289999999999998
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.08850000000000002
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.09489999999999998
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.040200000000000014
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.01040000000000002
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.06130000000000002
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.07700000000000001
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.02350000000000002
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.010799999999999976
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.021199999999999997
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.063
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.02240000000000003
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.010599999999999998
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.0232
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.03589999999999999
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.05299999999999999
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.06879999999999997
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.0032999999999999696
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.02589999999999998
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.01789999999999997
+        }
+      ],
+      "analytical_thinking": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.03799999999999992
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.03939999999999999
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.005199999999999982
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.03950000000000009
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.03550000000000009
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.04690000000000005
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.019600000000000062
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.0534
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.05360000000000009
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.021100000000000008
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.033399999999999985
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.02969999999999995
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.0032000000000000917
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.017999999999999905
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.006800000000000028
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.0027000000000000357
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.013499999999999956
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.0035000000000000586
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.028299999999999992
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.010200000000000098
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.008200000000000096
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.06459999999999999
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.036699999999999955
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.03749999999999998
+        }
+      ],
+      "controlled_perception": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.049299999999999955
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.008499999999999952
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.08929999999999999
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.043300000000000005
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.21199999999999997
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.2238
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.23149999999999998
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.16069999999999995
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.1048
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.1447
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.23559999999999998
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.20289999999999997
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.1946
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.2173
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.24129999999999996
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.21309999999999996
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.1295
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.08360000000000001
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.05069999999999997
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.05740000000000001
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.06279999999999997
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.1613
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.17879999999999996
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.11409999999999998
+        }
+      ]
+    },
+    "scalar_error_series": [
+      {
+        "date": "2022-01-01",
+        "month_offset": 0.0,
+        "absolute_error": 0.0028000000000000247
+      },
+      {
+        "date": "2022-02-01",
+        "month_offset": 1.0184804928131417,
+        "absolute_error": 0.006900000000000017
+      },
+      {
+        "date": "2022-03-01",
+        "month_offset": 1.9383983572895278,
+        "absolute_error": 0.0016999999999999238
+      },
+      {
+        "date": "2022-04-01",
+        "month_offset": 2.9568788501026693,
+        "absolute_error": 0.006000000000000005
+      },
+      {
+        "date": "2022-05-01",
+        "month_offset": 3.9425051334702257,
+        "absolute_error": 0.03259999999999996
+      },
+      {
+        "date": "2022-06-01",
+        "month_offset": 4.960985626283367,
+        "absolute_error": 0.02310000000000001
+      },
+      {
+        "date": "2022-07-01",
+        "month_offset": 5.946611909650924,
+        "absolute_error": 0.019499999999999962
+      },
+      {
+        "date": "2022-08-01",
+        "month_offset": 6.965092402464066,
+        "absolute_error": 0.0032999999999999696
+      },
+      {
+        "date": "2022-09-01",
+        "month_offset": 7.983572895277208,
+        "absolute_error": 0.008099999999999996
+      },
+      {
+        "date": "2022-10-01",
+        "month_offset": 8.969199178644764,
+        "absolute_error": 0.021299999999999986
+      },
+      {
+        "date": "2022-11-01",
+        "month_offset": 9.987679671457906,
+        "absolute_error": 0.04849999999999999
+      },
+      {
+        "date": "2022-12-01",
+        "month_offset": 10.973305954825461,
+        "absolute_error": 0.03839999999999999
+      },
+      {
+        "date": "2023-01-01",
+        "month_offset": 11.991786447638603,
+        "absolute_error": 0.02279999999999993
+      },
+      {
+        "date": "2023-02-01",
+        "month_offset": 13.010266940451745,
+        "absolute_error": 0.03959999999999997
+      },
+      {
+        "date": "2023-03-01",
+        "month_offset": 13.930184804928132,
+        "absolute_error": 0.05389999999999995
+      },
+      {
+        "date": "2023-04-01",
+        "month_offset": 14.948665297741274,
+        "absolute_error": 0.0413
+      },
+      {
+        "date": "2023-05-01",
+        "month_offset": 15.93429158110883,
+        "absolute_error": 0.026000000000000023
+      },
+      {
+        "date": "2023-06-01",
+        "month_offset": 16.95277207392197,
+        "absolute_error": 0.018799999999999928
+      },
+      {
+        "date": "2023-07-01",
+        "month_offset": 17.93839835728953,
+        "absolute_error": 0.012599999999999945
+      },
+      {
+        "date": "2023-08-01",
+        "month_offset": 18.95687885010267,
+        "absolute_error": 0.009299999999999975
+      },
+      {
+        "date": "2023-09-01",
+        "month_offset": 19.975359342915812,
+        "absolute_error": 0.0007000000000000339
+      },
+      {
+        "date": "2023-10-01",
+        "month_offset": 20.960985626283367,
+        "absolute_error": 0.03320000000000001
+      },
+      {
+        "date": "2023-11-01",
+        "month_offset": 21.97946611909651,
+        "absolute_error": 0.026100000000000012
+      },
+      {
+        "date": "2023-12-01",
+        "month_offset": 22.965092402464066,
+        "absolute_error": 0.0025999999999999357
+      }
+    ],
+    "static_misalignment": {
+      "baseline_name": "self_reported_static_theta",
+      "material_threshold_rmse": 0.12,
+      "num_events": 24,
+      "initial_rmse": 0.04679300161348914,
+      "final_rmse": 0.08645675219437748,
+      "average_rmse": 0.09142889727262858,
+      "max_rmse": 0.16976904164187298,
+      "rmse_growth": 0.03966375058088834,
+      "material_misalignment_rate": 0.20833333333333334,
+      "first_material_misalignment_date": "2022-05-01",
+      "drift_slope_rmse_per_month": -0.00023154561511832335,
+      "error_series": [
+        {
+          "date": "2022-01-01",
+          "month_offset": 0.0,
+          "absolute_error": 0.16319999999999985,
+          "squared_error": 0.00875833999999999,
+          "mae": 0.04079999999999996,
+          "rmse": 0.04679300161348914
+        },
+        {
+          "date": "2022-02-01",
+          "month_offset": 1.0184804928131417,
+          "absolute_error": 0.12319999999999992,
+          "squared_error": 0.005118499999999999,
+          "mae": 0.03079999999999998,
+          "rmse": 0.03577184647177162
+        },
+        {
+          "date": "2022-03-01",
+          "month_offset": 1.9383983572895278,
+          "absolute_error": 0.18229999999999996,
+          "squared_error": 0.012089229999999996,
+          "mae": 0.04557499999999999,
+          "rmse": 0.05497551727814845
+        },
+        {
+          "date": "2022-04-01",
+          "month_offset": 2.9568788501026693,
+          "absolute_error": 0.13180000000000003,
+          "squared_error": 0.005022060000000005,
+          "mae": 0.03295000000000001,
+          "rmse": 0.035433247099299285
+        },
+        {
+          "date": "2022-05-01",
+          "month_offset": 3.9425051334702257,
+          "absolute_error": 0.47920000000000007,
+          "squared_error": 0.0741001,
+          "mae": 0.11980000000000002,
+          "rmse": 0.13610666772792582
+        },
+        {
+          "date": "2022-06-01",
+          "month_offset": 4.960985626283367,
+          "absolute_error": 0.5322000000000001,
+          "squared_error": 0.09004730000000002,
+          "mae": 0.13305000000000003,
+          "rmse": 0.1500394114891151
+        },
+        {
+          "date": "2022-07-01",
+          "month_offset": 5.946611909650924,
+          "absolute_error": 0.5747,
+          "squared_error": 0.11528611,
+          "mae": 0.143675,
+          "rmse": 0.16976904164187298
+        },
+        {
+          "date": "2022-08-01",
+          "month_offset": 6.965092402464066,
+          "absolute_error": 0.38869999999999993,
+          "squared_error": 0.04835544999999997,
+          "mae": 0.09717499999999998,
+          "rmse": 0.10994936334513263
+        },
+        {
+          "date": "2022-09-01",
+          "month_offset": 7.983572895277208,
+          "absolute_error": 0.2627000000000001,
+          "squared_error": 0.02278137000000001,
+          "mae": 0.06567500000000003,
+          "rmse": 0.07546749300195417
+        },
+        {
+          "date": "2022-10-01",
+          "month_offset": 8.969199178644764,
+          "absolute_error": 0.32670000000000005,
+          "squared_error": 0.035061150000000006,
+          "mae": 0.08167500000000001,
+          "rmse": 0.09362311413320966
+        },
+        {
+          "date": "2022-11-01",
+          "month_offset": 9.987679671457906,
+          "absolute_error": 0.498,
+          "squared_error": 0.08565592,
+          "mae": 0.1245,
+          "rmse": 0.14633516323836865
+        },
+        {
+          "date": "2022-12-01",
+          "month_offset": 10.973305954825461,
+          "absolute_error": 0.3585,
+          "squared_error": 0.05308851,
+          "mae": 0.089625,
+          "rmse": 0.11520471995539071
+        },
+        {
+          "date": "2023-01-01",
+          "month_offset": 11.991786447638603,
+          "absolute_error": 0.3193000000000001,
+          "squared_error": 0.05025053,
+          "mae": 0.07982500000000002,
+          "rmse": 0.11208314993789209
+        },
+        {
+          "date": "2023-02-01",
+          "month_offset": 13.010266940451745,
+          "absolute_error": 0.35449999999999987,
+          "squared_error": 0.057596729999999985,
+          "mae": 0.08862499999999997,
+          "rmse": 0.1199965937016547
+        },
+        {
+          "date": "2023-03-01",
+          "month_offset": 13.930184804928132,
+          "absolute_error": 0.39289999999999997,
+          "squared_error": 0.06893216999999999,
+          "mae": 0.09822499999999999,
+          "rmse": 0.1312746833932575
+        },
+        {
+          "date": "2023-04-01",
+          "month_offset": 14.948665297741274,
+          "absolute_error": 0.3059,
+          "squared_error": 0.050503949999999985,
+          "mae": 0.076475,
+          "rmse": 0.11236541950262098
+        },
+        {
+          "date": "2023-05-01",
+          "month_offset": 15.93429158110883,
+          "absolute_error": 0.18209999999999993,
+          "squared_error": 0.017877109999999998,
+          "mae": 0.04552499999999998,
+          "rmse": 0.06685265514547646
+        },
+        {
+          "date": "2023-06-01",
+          "month_offset": 16.95277207392197,
+          "absolute_error": 0.12860000000000005,
+          "squared_error": 0.00787434,
+          "mae": 0.03215000000000001,
+          "rmse": 0.0443687389949275
+        },
+        {
+          "date": "2023-07-01",
+          "month_offset": 17.93839835728953,
+          "absolute_error": 0.17889999999999995,
+          "squared_error": 0.008756189999999995,
+          "mae": 0.04472499999999999,
+          "rmse": 0.046787257880752095
+        },
+        {
+          "date": "2023-08-01",
+          "month_offset": 18.95687885010267,
+          "absolute_error": 0.16350000000000015,
+          "squared_error": 0.008048210000000005,
+          "mae": 0.040875000000000036,
+          "rmse": 0.04485590819501932
+        },
+        {
+          "date": "2023-09-01",
+          "month_offset": 19.975359342915812,
+          "absolute_error": 0.1512,
+          "squared_error": 0.008874479999999994,
+          "mae": 0.0378,
+          "rmse": 0.047102229246607834
+        },
+        {
+          "date": "2023-10-01",
+          "month_offset": 20.960985626283367,
+          "absolute_error": 0.31899999999999995,
+          "squared_error": 0.03826578,
+          "mae": 0.07974999999999999,
+          "rmse": 0.09780820517727538
+        },
+        {
+          "date": "2023-11-01",
+          "month_offset": 21.97946611909651,
+          "absolute_error": 0.3784999999999999,
+          "squared_error": 0.052783549999999985,
+          "mae": 0.09462499999999997,
+          "rmse": 0.11487335417754631
+        },
+        {
+          "date": "2023-12-01",
+          "month_offset": 22.965092402464066,
+          "absolute_error": 0.2925999999999999,
+          "squared_error": 0.029899079999999988,
+          "mae": 0.07314999999999998,
+          "rmse": 0.08645675219437748
+        }
+      ],
+      "error_growth_rate": {
+        "slope_per_month": 0.0017271322007235894,
+        "start_error": 0.04679300161348914,
+        "end_error": 0.08645675219437748,
+        "start_month": 0.0,
+        "end_month": 22.965092402464066
+      },
+      "window_growth_comparison": {
+        "early_window_growth": {
+          "slope_per_month": 0.0206800177810162,
+          "start_error": 0.04679300161348914,
+          "end_error": 0.16976904164187298,
+          "start_month": 0.0,
+          "end_month": 5.946611909650924
+        },
+        "late_window_growth": {
+          "slope_per_month": 0.00789176622987564,
+          "start_error": 0.046787257880752095,
+          "end_error": 0.08645675219437748,
+          "start_month": 17.93839835728953,
+          "end_month": 22.965092402464066
+        },
+        "growth_ratio_late_vs_early": 0.3816131259384171
+      }
+    },
+    "hypothesis_supported": false
+  }
+}
